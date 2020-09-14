@@ -1,0 +1,1160 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Infomedia</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="dist/media/img/favicon.png" type="image/png">
+
+    <!-- Soho css -->
+    <link rel="stylesheet" href="dist/css/soho.min.css">
+
+    <link rel="stylesheet" href="./dist/css/app.css">
+    <link rel="stylesheet" href="./dist/css/custom.css">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://emoji-css.afeld.me/emoji.css" rel="stylesheet">
+
+    <!-- js tambahan -->
+    <script src="./dist/js/w3-include.js"></script>
+</head>
+
+<body>
+    <!-- page loading -->
+    <div class="page-loading"></div>
+    <!-- ./ page loading -->
+
+    <!-- new chat modal -->
+    <div class="modal fade" id="addChat" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-zoom" role="document">
+            <div class="modal-content" style="width:60%; left:24%">
+                <div class="modal-header">
+                    <h5 class="modal-title">
+                        <i class="material-icons">group</i> List Agent
+                    </h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <i class="ti-close"></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form action="">
+                        <input type="text" class="form-control mb-2" placeholder="Search Agent">
+                    </form>
+                    <div class="sidebar-body">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item-modal">
+                                <div class="row">
+                                    <div class="col-sm-auto">
+                                        <figure class="avatar">
+                                            <img src="https://via.placeholder.com/150" class="rounded-circle">
+                                        </figure>
+                                    </div>
+                                    <div class="col-sm-auto">
+                                        <div class="users-list-body">
+                                            <h6>Michael Doe</h6>
+                                            <p>1001</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="list-group-item-modal">
+                                <div class="row">
+                                    <div class="col-sm-auto">
+                                        <figure class="avatar">
+                                            <img src="https://via.placeholder.com/150" class="rounded-circle">
+                                        </figure>
+                                    </div>
+                                    <div class="col-sm-auto">
+                                        <div class="users-list-body">
+                                            <h6>Steve Doe</h6>
+                                            <p>1001</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="list-group-item-modal">
+                                <div class="row">
+                                    <div class="col-sm-auto">
+                                        <figure class="avatar">
+                                            <img src="https://via.placeholder.com/150" class="rounded-circle">
+                                        </figure>
+                                    </div>
+                                    <div class="col-sm-auto">
+                                        <div class="users-list-body">
+                                            <h6>Luna Doe</h6>
+                                            <p>1001</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="list-group-item-modal">
+                                <div class="row">
+                                    <div class="col-sm-auto">
+                                        <figure class="avatar">
+                                            <img src="https://via.placeholder.com/150" class="rounded-circle">
+                                        </figure>
+                                    </div>
+                                    <div class="col-sm-auto">
+                                        <div class="users-list-body">
+                                            <h6>Alex Doe</h6>
+                                            <p>1001</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="list-group-item-modal">
+                                <div class="row">
+                                    <div class="col-sm-auto">
+                                        <figure class="avatar">
+                                            <img src="https://via.placeholder.com/150" class="rounded-circle">
+                                        </figure>
+                                    </div>
+                                    <div class="col-sm-auto">
+                                        <div class="users-list-body">
+                                            <h6>Rini Doe</h6>
+                                            <p>1001</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ./ new chat modal -->
+
+    <!-- category modal -->
+    <div class="modal fade" id="categoryModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-zoom" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">
+                        Select Category
+                    </h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <i class="ti-close"></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form action="">
+                        <input type="text" class="form-control mb-2" placeholder="Find Category"
+                            style="1px solid #F5F5F5 !important">
+                    </form>
+                    <div class="table-responsive mt-4">
+                        <table class="table table-sm table-bordered">
+                            <thead class="thead-green1">
+                                <tr>
+                                    <th scope="col">Category</th>
+                                    <th scope="col">Sub Category</th>
+                                    <th scope="col">Action</th>
+                                </tr>
+                            </thead>
+                            <tbody class="text-center">
+                                <tr>
+                                    <td>Complaint</td>
+                                    <td>Banking</td>
+                                    <td><a href="#" class="text-green1">Select</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Complaint</td>
+                                    <td>Kartu Kredit</td>
+                                    <td><a href="#" class="text-green1">Select</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Complaint</td>
+                                    <td>Lainnya</td>
+                                    <td><a href="#" class="text-green1">Select</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Complaint</td>
+                                    <td>Test Call</td>
+                                    <td><a href="#" class="text-green1">Select</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Complaint</td>
+                                    <td>Jaringan Jelek</td>
+                                    <td><a href="#" class="text-green1">Select</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Complaint</td>
+                                    <td>Menu tidak sesuai</td>
+                                    <td><a href="#" class="text-green1">Select</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Complaint</td>
+                                    <td>Alamat tidak sesuai</td>
+                                    <td><a href="#" class="text-green1">Select</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Complaint</td>
+                                    <td>Informasi promo</td>
+                                    <td><a href="#" class="text-green1">Select</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Complaint</td>
+                                    <td>Lainnya</td>
+                                    <td><a href="#" class="text-green1">Select</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Complaint</td>
+                                    <td>Coba Lagi</td>
+                                    <td><a href="#" class="text-green1">Select</a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <nav aria-label="Page navigation example">
+                        <ul class="pagination justify-content-center">
+                          <li class="page-item">
+                            <a class="page-link" href="#" aria-label="Previous">
+                              <span aria-hidden="true">&laquo;</span>
+                              <span class="sr-only">Previous</span>
+                            </a>
+                          </li>
+                          <li class="page-item"><a class="page-link" href="#">1</a></li>
+                          <li class="page-item"><a class="page-link" href="#">2</a></li>
+                          <li class="page-item"><a class="page-link" href="#">3</a></li>
+                          <li class="page-item">
+                            <a class="page-link" href="#" aria-label="Next">
+                              <span aria-hidden="true">&raquo;</span>
+                              <span class="sr-only">Next</span>
+                            </a>
+                          </li>
+                        </ul>
+                      </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ./ Category modal -->
+
+    <!-- new group modal -->
+    <div class="modal fade" id="newGroup" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-zoom" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">
+                        <i class="fa fa-users"></i> New Group
+                    </h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <i class="ti-close"></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="group_name" class="col-form-label">Group name</label>
+                            <input type="text" class="form-control" id="group_name">
+                        </div>
+                        <div class="form-group">
+                            <label for="users" class="col-form-label">Users</label>
+                            <input type="text" class="form-control" id="users" placeholder="Find user">
+                        </div>
+                        <div class="form-group">
+                            <div class="avatar-group">
+                                <figure class="avatar">
+                                    <span class="avatar-title bg-success rounded-circle">E</span>
+                                </figure>
+                                <figure class="avatar">
+                                    <img src="https://via.placeholder.com/150" class="rounded-circle">
+                                </figure>
+                                <figure class="avatar">
+                                    <span class="avatar-title bg-danger rounded-circle">S</span>
+                                </figure>
+                                <figure class="avatar">
+                                    <img src="https://via.placeholder.com/150" class="rounded-circle">
+                                </figure>
+                                <figure class="avatar">
+                                    <span class="avatar-title bg-info rounded-circle">C</span>
+                                </figure>
+                                <a href="#">
+                                    <figure class="avatar">
+                                        <span class="avatar-title bg-primary rounded-circle">+</span>
+                                    </figure>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="description" class="col-form-label">Description</label>
+                            <textarea class="form-control" id="description"></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary">Create Group</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ./ new group modal -->
+
+    <!-- setting modal -->
+    <div class="modal fade" id="settingModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-zoom" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">
+                        <i class="ti-settings"></i> Settings
+                    </h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <i class="ti-close"></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <ul class="nav nav-tabs" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" data-toggle="tab" href="#account" role="tab"
+                                aria-controls="account" aria-selected="true">Account</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#notification" role="tab"
+                                aria-controls="notification" aria-selected="false">Notification</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#contact" role="tab" aria-controls="contact"
+                                aria-selected="false">Security</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content">
+                        <div class="tab-pane show active" id="account" role="tabpanel">
+                            <div class="form-item custom-control custom-switch">
+                                <input type="checkbox" class="custom-control-input" checked id="customSwitch1">
+                                <label class="custom-control-label" for="customSwitch1">Allow connected contacts</label>
+                            </div>
+                            <div class="form-item custom-control custom-switch">
+                                <input type="checkbox" class="custom-control-input" checked id="customSwitch2">
+                                <label class="custom-control-label" for="customSwitch2">Confirm message requests</label>
+                            </div>
+                            <div class="form-item custom-control custom-switch">
+                                <input type="checkbox" class="custom-control-input" checked id="customSwitch3">
+                                <label class="custom-control-label" for="customSwitch3">Profile privacy</label>
+                            </div>
+                            <div class="form-item custom-control custom-switch">
+                                <input type="checkbox" class="custom-control-input" id="customSwitch4">
+                                <label class="custom-control-label" for="customSwitch4">Developer mode options</label>
+                            </div>
+                            <div class="form-item custom-control custom-switch">
+                                <input type="checkbox" class="custom-control-input" checked id="customSwitch5">
+                                <label class="custom-control-label" for="customSwitch5">Two-step security
+                                    verification</label>
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="notification" role="tabpanel">
+                            <div class="form-item custom-control custom-switch">
+                                <input type="checkbox" class="custom-control-input" checked id="customSwitch6">
+                                <label class="custom-control-label" for="customSwitch6">Allow mobile
+                                    notifications</label>
+                            </div>
+                            <div class="form-item custom-control custom-switch">
+                                <input type="checkbox" class="custom-control-input" id="customSwitch7">
+                                <label class="custom-control-label" for="customSwitch7">Notifications from your
+                                    friends</label>
+                            </div>
+                            <div class="form-item custom-control custom-switch">
+                                <input type="checkbox" class="custom-control-input" id="customSwitch8">
+                                <label class="custom-control-label" for="customSwitch8">Send notifications by
+                                    email</label>
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="contact" role="tabpanel">
+                            <div class="form-item custom-control custom-switch">
+                                <input type="checkbox" class="custom-control-input" id="customSwitch9">
+                                <label class="custom-control-label" for="customSwitch9">Suggest changing passwords every
+                                    month.</label>
+                            </div>
+                            <div class="form-item custom-control custom-switch">
+                                <input type="checkbox" class="custom-control-input" checked id="customSwitch10">
+                                <label class="custom-control-label" for="customSwitch10">Let me know about suspicious
+                                    entries to your account</label>
+                            </div>
+                            <div class="form-item">
+                                <p>
+                                    <a data-toggle="collapse" href="#collapseExample" role="button"
+                                        aria-expanded="false" aria-controls="collapseExample">
+                                        <span class="ti-plus btn-icon"></span> Security Questions
+                                    </a>
+                                </p>
+                                <div class="collapse" id="collapseExample">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Question 1">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Question 2">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ./ setting modal -->
+    <div class="layout">
+
+        <!-- navigation -->
+        <nav class="navigation">
+            <div class="nav-group">
+                <ul>
+                    <li>
+                        <a class="logo" href="#">
+                            <img src="img/white-logo.png" class="img_logo">
+                        </a>
+                    </li>
+                    <li>
+                        <a data-navigation-target="chats" class="active" href="javascript:nav_chat()">
+                            <i class="ti-comment-alt"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a data-navigation-target="chat_agent" href="javascript:nav_agent()" id="chat_agent"><i
+                                class="material-icons">group</i></a>
+                    </li>
+                    <li>
+                        <a data-navigation-target="favorites" href="#">
+                            <i class="fa fa-history"></i>
+                        </a>
+                    </li>
+                    <li data-navigation-target="#" class="brackets">
+                        <a href="#">
+                            <i class="fa fa-user"></i>
+                        </a>
+                    </li>
+                    <!-- <li>
+                    <a href="#" data-toggle="modal" data-target="#editProfileModal">
+                        <i class="ti-pencil"></i>
+                    </a>
+                </li> -->
+                    <li>
+                        <a href="#" data-toggle="modal" data-target="#settingModal">
+                            <i class="ti-settings"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./login.html">
+                            <i class="ti-power-off"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!-- ./ navigation -->
+
+        <!-- content -->
+        <div class="content">
+
+            <!-- Left Column -->
+            <div class="sidebar-group">
+                <!-- Chats sidebar -->
+                <div id="chats" class="sidebar active w-300">
+                    <header class="bg-green">
+                        <span>Chats</span>
+                    </header>
+                    <!-- <form action="">
+                        <input type="text" class="form-control" placeholder="Search chat">
+                    </form> -->
+                    <div class="sidebar-body">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">
+                                <figure class="avatar">
+                                    <span class="avatar-title bg-green1 rounded-circle">NF</span>
+                                </figure>
+                                <div class="users-list-body">
+                                    <h6 class="label-name">Nada Fadhilah Fitriyani</h6>
+                                    <p class="label-date">Wed, 28 Jan 2020 at 20:32:12</p>
+                                    <div class="users-list-action">
+                                        <div class="new-message-count"></div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="list-group-item open-chat">
+                                <div>
+                                    <figure class="avatar">
+                                        <span class="avatar-title bg-pink rounded-circle">YH</span>
+                                    </figure>
+                                </div>
+                                <div class="users-list-body">
+                                    <h6 class="label-name">Yolanda Hutajulu</h6>
+                                    <p class="label-date">Wed, 28 Jan 2020 at 20:32:12</p>
+                                    <div class="users-list-action">
+                                        <div class="new-message-count"></div>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="list-group-item">
+                                <div>
+                                    <figure class="avatar">
+                                        <span class="avatar-title bg-purple rounded-circle">JH</span>
+                                    </figure>
+                                </div>
+                                <div class="users-list-body">
+                                    <h6 class="label-name">Jashinta Shanindita</h6>
+                                    <p class="label-date">Wed, 28 Jan 2020 at 20:32:12</p>
+                                    <div class="users-list-action">
+                                        <div class="new-message-count"></div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="list-group-item">
+                                <div>
+                                    <figure class="avatar">
+                                        <span class="avatar-title bg-orange rounded-circle">MH</span>
+                                    </figure>
+                                </div>
+                                <div class="users-list-body">
+                                    <h6 class="label-name">Mumtaz Haya W</h6>
+                                    <p class="label-date">Wed, 28 Jan 2020 at 20:32:12</p>
+                                    <div class="users-list-action">
+                                        <div class="new-message-count"></div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="list-group-item">
+                                <div>
+                                    <figure class="avatar">
+                                        <span class="avatar-title bg-gray1 rounded-circle">SO</span>
+                                    </figure>
+                                </div>
+                                <div class="users-list-body">
+                                    <h6 class="label-name">Selvie Oktaviani</h6>
+                                    <p class="label-date">Wed, 28 Jan 2020 at 20:32:12</p>
+                                    <div class="users-list-action">
+                                        <div class="new-message-count"></div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="list-group-item">
+                                <div>
+                                    <figure class="avatar">
+                                        <span class="avatar-title bg-cyan rounded-circle">AA</span>
+                                    </figure>
+                                </div>
+                                <div class="users-list-body">
+                                    <h6 class="label-name">Annisa Aldinah</h6>
+                                    <p class="label-date">Wed, 28 Jan 2020 at 20:32:12</p>
+                                    <div class="users-list-action">
+                                        <div class="new-message-count"></div>
+                                    </div>
+                                </div>
+                            </li>
+
+                        </ul>
+                    </div>
+                    <header class="bg-green headersm">
+                        <h6 class="mt-3">List Queue [0] </h6>
+                        <ul class="list-inline mb-3">
+                            <li class="list-inline-item" data-toggle="tooltip" title="Pickup">
+                                <a class="btn btn-white" href="#" data-toggle="modal" data-target="#newGroup">
+                                    <i class="fa fa-arrow-up"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </header>
+                    <div class="sidebar-body text-center">
+                        <img src="img/queue.png" class="mt-5" width="100">
+                    </div>
+                </div>
+                <!-- ./ Chats sidebar -->
+
+                <!-- new chat agent sidebar -->
+                <div id="chat_agent" class="sidebar">
+                    <header class="bg-green">
+                        <span>Agents</span>
+                        <ul class="list-inline">
+                            <li class="list-inline-item mb-3">
+                                <a class="btn btn-white" href="#" data-toggle="modal" data-target="#addChat">
+                                    <i class="ti-plus btn-icon"></i> New Chat
+                                </a>
+                            </li>
+                            <li class="list-inline-item d-lg-none d-sm-block">
+                                <a href="#" class="btn btn-light sidebar-close">
+                                    <i class="ti-close"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </header>
+                    <div class="sidebar-body">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">
+                                <div>
+                                    <figure class="avatar">
+                                        <img src="https://via.placeholder.com/150" class="rounded-circle">
+                                    </figure>
+                                </div>
+                                <div class="users-list-body">
+                                    <h6>Harrietta Souten</h6>
+                                    <p>Lorem ipsum dolor sitsdc sdcsdc sdcsdcs</p>
+                                </div>
+                                <h6 class="text-muted small">12.40</h6>
+                            </li>
+                            <li class="list-group-item">
+                                <div>
+                                    <figure class="avatar">
+                                        <span class="avatar-title bg-success rounded-circle">A</span>
+                                    </figure>
+                                </div>
+                                <div class="users-list-body">
+                                    <h6>Aline McShee</h6>
+                                    <p>Lorem ipsum dolor sitsdc sdcsdc sdcsdcs</p>
+
+                                </div>
+                                <h6 class="text-muted small">12.40</h6>
+                            </li>
+                            <li class="list-group-item">
+                                <div>
+                                    <figure class="avatar">
+                                        <img src="https://via.placeholder.com/150" class="rounded-circle">
+                                    </figure>
+                                </div>
+                                <div class="users-list-body">
+                                    <h6>Brietta Blogg</h6>
+                                    <p>Lorem ipsum dolor sitsdc sdcsdc sdcsdcs</p>
+                                </div>
+                                <h6 class="text-muted small">12.40</h6>
+                            </li>
+                            <li class="list-group-item">
+                                <div>
+                                    <figure class="avatar">
+                                        <img src="https://via.placeholder.com/150" class="rounded-circle">
+                                    </figure>
+                                </div>
+                                <div class="users-list-body">
+                                    <h6>Karl Hubane</h6>
+                                    <p>Lorem ipsum dolor sitsdc sdcsdc sdcsdcs</p>
+                                </div>
+                                <h6 class="text-muted small">12.40</h6>
+                            </li>
+                            <li class="list-group-item">
+                                <div>
+                                    <figure class="avatar">
+                                        <img src="https://via.placeholder.com/150" class="rounded-circle">
+                                    </figure>
+                                </div>
+                                <div class="users-list-body">
+                                    <h6>Jillana Tows</h6>
+                                    <p>Lorem ipsum dolor sitsdc sdcsdc sdcsdcs</p>
+                                </div>
+                                <h6 class="text-muted small">12.40</h6>
+                            </li>
+                            <li class="list-group-item">
+                                <div>
+                                    <figure class="avatar">
+                                        <span class="avatar-title bg-info rounded-circle">AD</span>
+                                    </figure>
+                                </div>
+                                <div class="users-list-body">
+                                    <h6>Alina Derington</h6>
+                                    <p>Lorem ipsum dolor sitsdc sdcsdc sdcsdcs</p>
+                                </div>
+                                <h6 class="text-muted small">12.40</h6>
+                            </li>
+                            <li class="list-group-item">
+                                <div>
+                                    <figure class="avatar">
+                                        <span class="avatar-title bg-warning rounded-circle">S</span>
+                                    </figure>
+                                </div>
+                                <div class="users-list-body">
+                                    <h6>Stevy Kermeen</h6>
+                                    <p>Lorem ipsum dolor sitsdc sdcsdc sdcsdcs</p>
+                                </div>
+                                <h6 class="text-muted small">12.40</h6>
+                            </li>
+                            <li class="list-group-item">
+                                <div>
+                                    <figure class="avatar">
+                                        <img src="https://via.placeholder.com/150" class="rounded-circle">
+                                    </figure>
+                                </div>
+                                <div class="users-list-body">
+                                    <h6>Stevy Kermeen</h6>
+                                    <p>Lorem ipsum dolor sitsdc sdcsdc sdcsdcs</p>
+                                </div>
+                                <h6 class="text-muted small">12.40</h6>
+                            </li>
+                            <li class="list-group-item">
+                                <div>
+                                    <figure class="avatar">
+                                        <img src="https://via.placeholder.com/150" class="rounded-circle">
+                                    </figure>
+                                </div>
+                                <div class="users-list-body">
+                                    <h6>Gloriane Shimmans</h6>
+                                    <p>Lorem ipsum dolor sitsdc sdcsdc sdcsdcs</p>
+                                </div>
+                                <h6 class="text-muted small">12.40</h6>
+                            </li>
+                            <li class="list-group-item">
+                                <div>
+                                    <figure class="avatar">
+                                        <span class="avatar-title bg-secondary rounded-circle">B</span>
+                                    </figure>
+                                </div>
+                                <div class="users-list-body">
+                                    <h6>Bernhard Perrett</h6>
+                                    <p>Lorem ipsum dolor sitsdc sdcsdc sdcsdcs</p>
+                                </div>
+                                <h6 class="text-muted small">12.40</h6>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- ./ Friends sidebar -->
+
+                <!-- Favorites sidebar -->
+                <div id="favorites" class="sidebar">
+                    <header>
+                        <span>Favorites</span>
+                        <ul class="list-inline">
+                            <li class="list-inline-item d-lg-none d-sm-block">
+                                <a href="#" class="btn btn-light sidebar-close">
+                                    <i class="ti-close"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </header>
+                    <form action="">
+                        <input type="text" class="form-control" placeholder="Search favorites">
+                    </form>
+                    <div class="sidebar-body">
+                        <ul class="list-group list-group-flush users-list">
+                            <li class="list-group-item">
+                                <div class="users-list-body">
+                                    <h6>Jennica Kindred</h6>
+                                    <p>I know how important this file is to you. You can trust me ;)</p>
+                                    <div class="users-list-action action-toggle">
+                                        <div class="dropdown">
+                                            <a data-toggle="dropdown" href="#">
+                                                <i class="ti-more"></i>
+                                            </a>
+                                            <div class="dropdown-menu dropdown-menu-right">
+                                                <a href="#" class="dropdown-item">View Chat</a>
+                                                <a href="#" class="dropdown-item">Forward</a>
+                                                <a href="#" class="dropdown-item">Delete</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="list-group-item">
+                                <div class="users-list-body">
+                                    <h6>Marvin Rohan</h6>
+                                    <p>Lorem ipsum dolor sitsdc sdcsdc sdcsdcs</p>
+                                    <div class="users-list-action action-toggle">
+                                        <div class="dropdown">
+                                            <a data-toggle="dropdown" href="#">
+                                                <i class="ti-more"></i>
+                                            </a>
+                                            <div class="dropdown-menu dropdown-menu-right">
+                                                <a href="#" class="dropdown-item">View Chat</a>
+                                                <a href="#" class="dropdown-item">Forward</a>
+                                                <a href="#" class="dropdown-item">Delete</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="list-group-item">
+                                <div class="users-list-body">
+                                    <h6>Frans Hanscombe</h6>
+                                    <p>Lorem ipsum dolor sitsdc sdcsdc sdcsdcs</p>
+                                    <div class="users-list-action action-toggle">
+                                        <div class="dropdown">
+                                            <a data-toggle="dropdown" href="#">
+                                                <i class="ti-more"></i>
+                                            </a>
+                                            <div class="dropdown-menu dropdown-menu-right">
+                                                <a href="#" class="dropdown-item">View Chat</a>
+                                                <a href="#" class="dropdown-item">Forward</a>
+                                                <a href="#" class="dropdown-item">Delete</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="list-group-item">
+                                <div class="users-list-body">
+                                    <h6>Karl Hubane</h6>
+                                    <p>Lorem ipsum dolor sitsdc sdcsdc sdcsdcs</p>
+                                    <div class="users-list-action action-toggle">
+                                        <div class="dropdown">
+                                            <a data-toggle="dropdown" href="#">
+                                                <i class="ti-more"></i>
+                                            </a>
+                                            <div class="dropdown-menu dropdown-menu-right">
+                                                <a href="#" class="dropdown-item">View Chat</a>
+                                                <a href="#" class="dropdown-item">Forward</a>
+                                                <a href="#" class="dropdown-item">Delete</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- ./ Stars sidebar -->
+
+            </div>
+            <!-- ./ Left Column -->
+
+            <!-- Chat Column-->
+            <div class="chat">
+                <div class="chat-header">
+                    <div class="chat-header-user">
+                        <figure class="avatar">
+                            <span class="avatar-title bg-avatar rounded-circle">YH</span>
+                        </figure>
+                        <div>
+                            <h6 class="font14">Yolanda Hutajulu</h6>
+                            <!-- <h6 class="font10 text-muted">User ID 1001</h6> -->
+                        </div>
+                    </div>
+                    <div class="chat-header-action">
+                        <ul class="list-inline">
+
+                            <li class="list-inline-item" style="margin-top:4px !important;">
+                                <a href="#" class="btn btn-sm btn-red font11">
+                                    End Interaction
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="chat-body">
+                    <div class="messages">
+                        <div class="message-item">
+                            <div class="message-content">
+                                Selamat pagi min, saya ingin bertanya perihal pengembalian barang itu bisa kapan ya?
+                            </div>
+                        </div>
+                        <div class="message-item">
+                            <div class="message-content">
+                                Refund nya juga min bagaimana?
+                            </div>
+                            <div class="message-action">
+                                May, 29 2018 22:45
+                            </div>
+                        </div>
+                        <div class="message-item outgoing-message">
+                            <div class="message-content text-muted">
+                                Selamat pagi bu
+                            </div>
+                            <div class="message-action">
+                                May, 29 2018 22:45
+                            </div>
+                        </div>
+                        <div class="message-item">
+                            <div class="message-content message-file">
+                                <div class="file-icon">
+                                    <i class="ti-file text-white"></i>
+                                </div>
+                                <div>
+                                    <div>style.zip <i class="text-white small">41.36 Mb</i></div>
+                                </div>
+                            </div>
+                            <div class="message-action">
+                                May, 29 2018 22:45
+                            </div>
+                        </div>
+                        <div class="message-item outgoing-message">
+                            <div class="message-content text-muted">
+                                Terimakasih telah menghubungi kami
+                            </div>
+                            <div class="message-action">
+                                May, 29 2018 22:45
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="chat-footer">
+                    <form action="">
+                        <button class="btn btn-light btn-floating" type="button">
+                            <i class="fa fa-paperclip"></i>
+                        </button>
+                        <input type="text" class="form-control" placeholder="Type your message here......"
+                            aria-label="Recipient's username" aria-describedby="button-addon2">
+                        <div class="form-buttons">
+                            <button class="btn btn-primary btn-floating" type="submit">
+                                <i class="fa fa-send"></i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!-- ./ Chat Column -->
+
+
+            <!-- Right Column -->
+            <div class="sidebar-group">
+                <!-- Chats sidebar -->
+                <div id="right-content" class="sidebar active">
+                    <header class="bg-green" style="padding:10px 10px 0px 14px">
+                        <ul class="nav nav-tabs" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active text-center" data-toggle="tab" href="#profile" role="tab"
+                                    aria-controls="profile" aria-selected="true"><i
+                                        class="fa fa-user md18"></i><br>Profile</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-center" data-toggle="tab" href="#cwc" role="tab"
+                                    aria-controls="cwc" aria-selected="false"><i
+                                        class="fa fa-pencil-square-o md18"></i><br>CWC</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-center" data-toggle="tab" href="#journey" role="tab"
+                                    aria-controls="journey" aria-selected="false">
+                                    <i class="material-icons">timeline</i>
+                                    <br>Journey</a>
+                            </li>
+                        </ul>
+
+                    </header>
+                    <div class="sidebar-body">
+                        <ul class="list-group list-group-flush">
+                            <div class="tab-content mt-3">
+                                <div class="tab-pane show active text-center p0" id="profile" role="tabpanel">
+
+                                    <figure class="avatar-profile">
+                                        <span class="avatar-title bg-avatar rounded-circle">YH</span>
+                                    </figure>
+
+                                    <h6 class="font14 mt-4">Yolanda Hutajulu</h6>
+                                    <h6 class="font12 text-muted mb-1">Cust ID : <a href="#"
+                                            class="text-green">233229302320</a>
+                                    </h6>
+                                    <div class="sidebar-body" style="padding:10px">
+                                        <form class="text-left">
+                                            <div class="form-group-cwc">
+                                                <label for="custID" class="col-form-label">Address</label>
+                                                <input type="text" class="form-control no-border" id="cust_name">
+                                            </div>
+                                            <div class="form-group-cwc">
+                                                <label for="custID" class="col-form-label">Company</label>
+                                                <input type="text" class="form-control no-border" id="category">
+                                            </div>
+                                            <div class="form-group-cwc">
+                                                <label for="custID" class="col-form-label">HP</label>
+                                                <input type="text" class="form-control no-border" id="sub_category">
+                                            </div>
+                                            <div class="form-group-cwc">
+                                                <label for="custID" class="col-form-label">HP</label>
+                                                <input type="text" class="form-control no-border" id="remark">
+                                            </div>
+                                            <div class="form-group-cwc">
+                                                <label for="custID" class="col-form-label">Phone</label>
+                                                <input type="text" class="form-control no-border" id="feedback">
+                                            </div>
+
+                                            <button type="submit" class="btn btn-md btn-green btn-block"
+                                                style="margin-top:1rem;">Save</button>
+                                        </form>
+                                    </div>
+
+                                </div>
+                                <div class="tab-pane m20" id="cwc" role="tabpanel">
+                                    <form>
+                                        <div class="form-group-cwc">
+                                            <label for="custID" class="col-form-label">Cust Name</label>
+                                            <input type="text" class="form-control no-border" id="cust_name">
+                                        </div>
+                                        <div class="form-group-cwc">
+                                            <label for="custID" class="col-form-label">Category</label>
+                                            <input type="text" class="form-control no-border" id="category">
+                                            <a data-toggle="modal" data-target="#categoryModal"><i
+                                                    class="search_icon position-abs"
+                                                    style="width:17px !important;"></i></a>
+                                        </div>
+                                        <div class="form-group-cwc">
+                                            <label for="custID" class="col-form-label">Sub Category</label>
+                                            <input type="text" class="form-control no-border" id="sub_category">
+                                        </div>
+                                        <div class="form-group-cwc">
+                                            <label for="custID" class="col-form-label">Remark</label>
+                                            <input type="text" class="form-control no-border" id="remark">
+                                        </div>
+                                        <div class="form-group-cwc">
+                                            <label for="custID" class="col-form-label">Feedback</label>
+                                            <input type="text" class="form-control no-border" id="feedback">
+                                        </div>
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item-top" style="border-top: 0px;
+                                            border-bottom: 1px solid rgba(0, 0, 0, .125);">
+                                                <div class="users-list-body text-left">
+                                                    <h6 class="font12">Sentimen </h6>
+                                                    <p class="text-muted font18">
+                                                        <i class="em em-slightly_frowning_face" aria-role="presentation"
+                                                            aria-label="SLIGHTLY FROWNING FACE" style="width:50px"></i>
+                                                        <i class="em em-neutral_face" aria-role="presentation"
+                                                            aria-label="NEUTRAL FACE" style="width:50px"></i>
+                                                        <i class="em em-slightly_smiling_face" aria-role="presentation"
+                                                            aria-label="SLIGHTLY SMILING FACE" style="width:50px"></i>
+                                                    </p>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <button type="submit" class="btn btn-md btn-green btn-block"
+                                            style="margin-top:4rem;">Submit</button>
+                                    </form>
+                                </div>
+                                <div class="tab-pane" id="journey" role="tabpanel">
+                                    <div class="card-journey">
+                                        <div class="row mb-2">
+                                            <div class="col-md-6">
+                                                <h6 class="font10"><i class="fa fa-clock-o mr-2"></i>27 Nov 2019 on
+                                                    08:20:10</h6>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <button type="button" class="btn btn-sm bg-green-positive ml-4 font8"
+                                                    style="
+                                                padding: 4px;">Positive</button>
+                                            </div>
+                                        </div>
+                                        <div class="row mb-2">
+                                            <div class="col-md-6">
+                                                <h6 class="font9"><i
+                                                        class="fa fa-circle text-green ml-1 mr-2 text-muted"></i>Category
+                                                    : Complaint</h6>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <button type="button" class="btn btn-sm btn-dark ml-4 font8" style="
+                                                padding: 4px;">Remark & Feedback</button>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <h6 class="font9"><i
+                                                        class="fa fa-circle text-green ml-1 mr-2 text-muted"></i>Subcategory
+                                                    : Banking</h6>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <button type="button" class="btn btn-sm btn-dark ml-4 font8" style="
+                                                padding: 4px;">Interaction</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-journey">
+                                        <div class="row mb-2">
+                                            <div class="col-md-6">
+                                                <h6 class="font10"><i class="fa fa-clock-o mr-2"></i>27 Nov 2019 on
+                                                    08:20:10</h6>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <button type="button" class="btn btn-sm bg-green-positive ml-4 font8"
+                                                    style="
+                                                padding: 4px;">Positive</button>
+                                            </div>
+                                        </div>
+                                        <div class="row mb-2">
+                                            <div class="col-md-6">
+                                                <h6 class="font9"><i
+                                                        class="fa fa-circle text-green ml-1 mr-2 text-muted"></i>Category
+                                                    : Complaint</h6>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <button type="button" class="btn btn-sm btn-dark ml-4 font8" style="
+                                                padding: 4px;">Remark & Feedback</button>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <h6 class="font9"><i
+                                                        class="fa fa-circle text-green ml-1 mr-2 text-muted"></i>Subcategory
+                                                    : Banking</h6>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <button type="button" class="btn btn-sm btn-dark ml-4 font8" style="
+                                                padding: 4px;">Interaction</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-journey">
+                                        <div class="row mb-2">
+                                            <div class="col-md-6">
+                                                <h6 class="font10"><i class="fa fa-clock-o mr-2"></i>27 Nov 2019 on
+                                                    08:20:10</h6>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <button type="button" class="btn btn-sm bg-green-positive ml-4 font8"
+                                                    style="
+                                                padding: 4px;">Positive</button>
+                                            </div>
+                                        </div>
+                                        <div class="row mb-2">
+                                            <div class="col-md-6">
+                                                <h6 class="font9"><i
+                                                        class="fa fa-circle text-green ml-1 mr-2 text-muted"></i>Category
+                                                    : Complaint</h6>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <button type="button" class="btn btn-sm btn-dark ml-4 font8" style="
+                                                padding: 4px;">Remark & Feedback</button>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <h6 class="font9"><i
+                                                        class="fa fa-circle text-green ml-1 mr-2 text-muted"></i>Subcategory
+                                                    : Banking</h6>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <button type="button" class="btn btn-sm btn-dark ml-4 font8" style="
+                                                padding: 4px;">Interaction</button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                    </div>
+                    </ul>
+                </div>
+            </div>
+            <!-- ./ Chats sidebar -->
+        </div>
+        <!-- ./ Right Column -->
+    </div>
+    <!-- ./ content -->
+
+    </div>
+    <!-- layout -->
+    <!-- JQuery -->
+
+    <script>
+        includeHTML();
+    </script>
+
+    <script src="./vendor/jquery-3.4.1.min.js"></script>
+    <!-- Popper.js -->
+    <script src="./vendor/popper.min.js"></script>
+
+    <!-- Bootstrap -->
+    <script src="./vendor/bootstrap/bootstrap.min.js"></script>
+
+    <!-- Nicescroll -->
+    <script src="./vendor/jquery.nicescroll.min.js"></script>
+
+    <!-- Soho -->
+    <script src="./dist/js/soho.min.js"></script>
+
+    <!-- Examples -->
+    <script src="./dist/js/examples.js"></script>
+</body>
+
+</html>

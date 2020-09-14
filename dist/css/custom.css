@@ -1,0 +1,99 @@
+.bg-green1{
+    background: #77D668 !important;
+}
+
+a.bg-green1:focus,
+a.bg-green1:hover,
+button.bg-green1:focus,
+button.bg-green1:hover {
+    background-color: #55a349 !important
+}
+
+.bg-pink{
+    background: #F57878 !important;
+}
+
+a.bg-pink:focus,
+a.bg-pink:hover,
+button.bg-pink:focus,
+button.bg-pink:hover {
+    background-color: #d65151 !important
+}
+
+.bg-purple{
+    background: #CAA9FF !important;
+}
+
+a.bg-purple:focus,
+a.bg-purple:hover,
+button.bg-purple:focus,
+button.bg-purple:hover {
+    background-color: #9965ee !important
+}
+
+.bg-orange{
+    background: #FFB74A !important;
+}
+
+a.bg-orange:focus,
+a.bg-orange:hover,
+button.bg-orange:focus,
+button.bg-orange:hover {
+    background-color: #faa424 !important
+}
+
+.bg-gray1{
+    background: #C4C4C4 !important;
+}
+
+a.bg-gray1:focus,
+a.bg-gray1:hover,
+button.bg-gray1:focus,
+button.bg-gray1:hover {
+    background-color: #a8a8a8 !important
+}
+
+.bg-cyan{
+    background: #90F4E2 !important;
+}
+
+a.bg-cyan:focus,
+a.bg-cyan:hover,
+button.bg-cyan:focus,
+button.bg-cyan:hover {
+    background-color: #49f1d2 !important
+}
+
+.label-name{
+    font-size: 14px;
+}
+
+.label-date{
+    font-size: 10px;
+}
+
+.w-300{
+    width: 300px !important;
+}
+
+.thead-green1{
+    text-align: center;
+    background: #1FB47A !important;
+    color: #fff;
+}
+
+.text-green1{
+    color: #1f934d !important;
+}
+
+.position-abs{
+    position: absolute;
+    margin-top: 40px;
+    margin-left: 22em;
+}
+
+.search_icon {
+	content: url("data:image/svg+xml,%3Csvg viewBox='0 0 56.966 56.966' style='enable-background:new 0 0 56.966 56.966;' xml:space='preserve' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M55.146,51.887L41.588,37.786c3.486-4.144,5.396-9.358,5.396-14.786c0-12.682-10.318-23-23-23s-23,10.318-23,23s10.318,23,23,23c4.761,0,9.298-1.436,13.177-4.162l13.661,14.208c0.571,0.593,1.339,0.92,2.162,0.92c0.779,0,1.518-0.297,2.079-0.837C56.255,54.982,56.293,53.08,55.146,51.887z M23.984,6c9.374,0,17,7.626,17,17s-7.626,17-17,17s-17-7.626-17-17S14.61,6,23.984,6z' fill='%23B8BBBD'/%3E%3C/svg%3E");
+	background-repeat: no-repeat;
+	width: 20px !important;
+}
