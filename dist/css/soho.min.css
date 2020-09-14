@@ -6518,7 +6518,7 @@ input[type=submit].btn-block {
 .page-link {
     position: relative;
     display: block;
-    padding: .5rem .75rem;
+    padding: 3px 8px;
     margin-left: -1px;
     line-height: 1.25;
     color: #007bff;
@@ -6564,8 +6564,8 @@ input[type=submit].btn-block {
 .page-item.active .page-link {
     z-index: 1;
     color: #fff;
-    background-color: #007bff;
-    border-color: #007bff
+    background-color: #47BB75;
+    border-color: #47BB75
 }
 
 .page-item.disabled .page-link {
