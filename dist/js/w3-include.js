@@ -53,6 +53,6 @@ function delete_status_bar(){
     });
 }
 
-(function($){
-    delete_status_bar();
-})(jQuery);
+// (function($){
+//     delete_status_bar();
+// })(jQuery);

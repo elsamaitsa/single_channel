@@ -19,9 +19,9 @@
 
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://emoji-css.afeld.me/emoji.css" rel="stylesheet">
-
+    <script src="./vendor/jquery-3.4.1.min.js"></script>
     <!-- js tambahan -->
-    <script src="./dist/js/w3-include.js"></script>
+    <!-- <script src="./dist/js/w3-include.js"></script> -->
 </head>
 
 <body>
@@ -323,17 +323,20 @@
                         <div class="form-group-cwc">
                             <label for="currentPassword" class="col-form-label pb-0">Current Password</label>
                             <input type="password" class="form-control no-border" id="currentPassword">
-                            <span toggle="#password-field" class="fa fa-fw fa-eye show-eye-icon toggle-password"></span>
+                            <span toggle="#currentPassword"
+                                class="fa fa-fw fa-eye show-eye-icon toggle-current-password"></span>
                         </div>
                         <div class="form-group-cwc">
                             <label for="newPassword" class="col-form-label pb-0">New Password</label>
                             <input type="password" class="form-control no-border" id="newPassword">
-                            <span toggle="#password-field" class="fa fa-fw fa-eye show-eye-icon toggle-password"></span>
+                            <span toggle="#newPassword"
+                                class="fa fa-fw fa-eye show-eye-icon toggle-new-password"></span>
                         </div>
                         <div class="form-group-cwc">
                             <label for="confirmPassword" class="col-form-label pb-0">Confirm Password</label>
                             <input type="password" class="form-control no-border" id="confirmPassword">
-                            <span toggle="#password-field" class="fa fa-fw fa-eye show-eye-icon toggle-password"></span>
+                            <span toggle="#confirmPassword"
+                                class="fa fa-fw fa-eye show-eye-icon toggle-confirm-password"></span>
                         </div>
                         <button type="submit" class="btn btn-md btn-green btn-block mt-3">Save</button>
                     </form>
@@ -342,6 +345,109 @@
         </div>
     </div>
     <!-- ./ setting modal -->
+
+    <!-- Remark & Feedback modal -->
+    <div class="modal fade" id="rfModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-zoom" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">
+                        <i class="ti-settings"></i> Detail CWC
+                    </h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <i class="ti-close"></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-sm-auto pr-0">
+                            <figure class="avatar">
+                                <span class="avatar-title bg-green1 rounded-circle">NF</span>
+                            </figure>
+                        </div>
+                        <div class="col-sm-5 pl-2">
+                            <div class="row">
+                                <div class="col-sm-5 pr-0">
+                                    <h6 class="font9 text-muted">Customer Name</h6>
+                                </div>
+                                <div class="col-sm-5 pr-0">
+                                    <h6 class="font9"><span class="mr-1">:</span>Irham Hafizh</h6>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-sm-5 pr-0">
+                                    <h6 class="font9 text-muted">HP</h6>
+                                </div>
+                                <div class="col-sm-5 pr-0">
+                                    <h6 class="font9"><span class="mr-1">:</span>08578887533</h6>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-sm-5 pr-0">
+                                    <h6 class="font9 text-muted">Email</h6>
+                                </div>
+                                <div class="col-sm-5 pr-0">
+                                    <h6 class="font9"><span class="mr-1">:</span>irhamhafizh@gmail.com</h6>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-sm-5 pr-0" style="padding-left:20px !important;">
+                            <div class="row">
+                                <div class="col-sm-5 pr-0">
+                                    <h6 class="font9 text-muted">Date Contact</h6>
+                                </div>
+                                <div class="col-sm-7 pr-0">
+                                    <h6 class="font9"><span class="mr-1">:</span>29 Jan 2020 at 13:32:21</h6>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-sm-5 pr-0">
+                                    <h6 class="font9 text-muted">Category</h6>
+                                </div>
+                                <div class="col-sm-7 pr-0">
+                                    <h6 class="font9"><span class="mr-1">:</span></h6>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-sm-5 pr-0">
+                                    <h6 class="font9 text-muted">Sub Category</h6>
+                                </div>
+                                <div class="col-sm-7 pr-0">
+                                    <h6 class="font9"><span class="mr-1">:</span></h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+<!-- 
+                    <div class="row">
+                        <div class="col-sm-6" style="padding-right: 0px;  border: 1px solid #B8BBBD; margin-left: 20px;border-radius: 2px;">
+                            <h6 class="font10" style="padding: 9px 15px 6px 0px;">
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+                                has been the industry's standard dummy text ever since the 1500s, when an unknown
+                                printer took a galley of type and scrambled it to make a type specimen book.
+                            </h6>
+                        </div>
+
+                        <div class="col-sm-6" style="padding-right: 0px;  border: 1px solid #B8BBBD; margin-left: 20px;border-radius: 2px;">
+                            <h6 class="font10" style="padding: 9px 15px 6px 0px;">
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+                                has been the industry's standard dummy text ever since the 1500s, when an unknown
+                                printer took a galley of type and scrambled it to make a type specimen book.
+                            </h6>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ./ Remark & Feedback modal -->
+
     <div class="layout">
 
         <!-- navigation -->
@@ -953,7 +1059,43 @@
                                 <div class="tab-pane" id="journey" role="tabpanel">
                                     <div class="card-journey">
                                         <div class="row mb-2">
+                                            <div class="col-md-6" style="padding-right:0px !important">
+                                                <h6 class="font10"><i class="fa fa-clock-o mr-2"></i>27 Nov 2019 on
+                                                    08:20:10</h6>
+                                            </div>
                                             <div class="col-md-6">
+                                                <button type="button" class="btn btn-sm bg-green-positive ml-4 font8"
+                                                    style="
+                                                padding: 4px;">Positive</button>
+                                            </div>
+                                        </div>
+                                        <div class="row mb-2">
+                                            <div class="col-md-6">
+                                                <h6 class="font9"><i
+                                                        class="fa fa-circle text-green ml-1 mr-2 text-muted"></i>Category
+                                                    : Complaint</h6>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <button type="button" class="btn btn-sm btn-dark ml-4 font8"
+                                                    data-toggle="modal" data-target="#rfModal" style="
+                                                padding: 4px;">Remark & Feedback</button>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <h6 class="font9"><i
+                                                        class="fa fa-circle text-green ml-1 mr-2 text-muted"></i>Subcategory
+                                                    : Banking</h6>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <button type="button" class="btn btn-sm btn-dark ml-4 font8" style="
+                                                padding: 4px;">Interaction</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-journey">
+                                        <div class="row mb-2">
+                                            <div class="col-md-6" style="padding-right:0px !important">
                                                 <h6 class="font10"><i class="fa fa-clock-o mr-2"></i>27 Nov 2019 on
                                                     08:20:10</h6>
                                             </div>
@@ -988,42 +1130,7 @@
                                     </div>
                                     <div class="card-journey">
                                         <div class="row mb-2">
-                                            <div class="col-md-6">
-                                                <h6 class="font10"><i class="fa fa-clock-o mr-2"></i>27 Nov 2019 on
-                                                    08:20:10</h6>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <button type="button" class="btn btn-sm bg-green-positive ml-4 font8"
-                                                    style="
-                                                padding: 4px;">Positive</button>
-                                            </div>
-                                        </div>
-                                        <div class="row mb-2">
-                                            <div class="col-md-6">
-                                                <h6 class="font9"><i
-                                                        class="fa fa-circle text-green ml-1 mr-2 text-muted"></i>Category
-                                                    : Complaint</h6>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <button type="button" class="btn btn-sm btn-dark ml-4 font8" style="
-                                                padding: 4px;">Remark & Feedback</button>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <h6 class="font9"><i
-                                                        class="fa fa-circle text-green ml-1 mr-2 text-muted"></i>Subcategory
-                                                    : Banking</h6>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <button type="button" class="btn btn-sm btn-dark ml-4 font8" style="
-                                                padding: 4px;">Interaction</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="card-journey">
-                                        <div class="row mb-2">
-                                            <div class="col-md-6">
+                                            <div class="col-md-6" style="padding-right:0px !important">
                                                 <h6 class="font10"><i class="fa fa-clock-o mr-2"></i>27 Nov 2019 on
                                                     08:20:10</h6>
                                             </div>
@@ -1075,20 +1182,45 @@
     <!-- JQuery -->
 
     <script>
-        includeHTML();
+        // includeHTML();
         (function ($) {
-            $(document).on('click', '.toggle-password', function () {
+            $(document).ready(function () {
+                $(".toggle-current-password").click(function () {
 
-                $(this).toggleClass("fa-eye fa-eye-slash");
+                    $(this).toggleClass("fa-eye fa-eye-slash");
+                    var input = $($(this).attr("toggle"));
+                    if (input.attr("type") == "password") {
+                        input.attr("type", "text");
+                    } else {
+                        input.attr("type", "password");
+                    }
+                });
 
-                var input = $("#currentPassword");
-                input.attr('type') === 'password' ? input.attr('type', 'text') : input.attr('type',
-                    'password')
+                $(".toggle-confirm-password").click(function () {
+
+                    $(this).toggleClass("fa-eye fa-eye-slash");
+                    var input = $($(this).attr("toggle"));
+                    if (input.attr("type") == "password") {
+                        input.attr("type", "text");
+                    } else {
+                        input.attr("type", "password");
+                    }
+                });
+
+                $(".toggle-new-password").click(function () {
+
+                    $(this).toggleClass("fa-eye fa-eye-slash");
+                    var input = $($(this).attr("toggle"));
+                    if (input.attr("type") == "password") {
+                        input.attr("type", "text");
+                    } else {
+                        input.attr("type", "password");
+                    }
+                });
             });
-        });
+        })(jQuery);
     </script>
 
-    <script src="./vendor/jquery-3.4.1.min.js"></script>
     <!-- Popper.js -->
     <script src="./vendor/popper.min.js"></script>
 
