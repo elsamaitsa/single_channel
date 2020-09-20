@@ -58,3 +58,31 @@ $(function () {
     });
 
 });
+
+function nav_agent(){
+    $("#right-content").removeClass("active").prop("class","sidebar");
+}
+
+function nav_chat(){
+    $("#right-content").removeClass("sidebar").prop("class","sidebar active");
+}
+
+function nav_log_cwc(){
+    $("#right-content").removeClass("active").prop("class","sidebar");
+}
+
+function delete_status_bar(){
+    console.log("sdadada");
+    $("body").on('mouseover', 'a', function (e) {
+        var $link = $(this),
+            href = $link.attr('href') || $link.data("href");
+    
+        $link.off('click.chrome');
+        $link.on('click.chrome', function () {
+            window.location.href = href;
+        })
+        .attr('data-href', href) //keeps track of the href value
+        .css({ cursor: 'pointer' })
+        .removeAttr('href'); // <- this is what stops Chrome to display status bar
+    });
+}

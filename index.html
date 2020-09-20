@@ -35,9 +35,9 @@
         <div class="modal-dialog modal-dialog-centered modal-dialog-zoom" role="document">
             <div class="modal-content" style="width:60%; left:24%">
                 <div class="modal-header">
-                    <h5 class="modal-title">
+                    <h6 class="modal-title">
                         <i class="material-icons">group</i> List Agent
-                    </h5>
+                    </h6>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <i class="ti-close"></i>
                     </button>
@@ -137,9 +137,9 @@
         <div class="modal-dialog modal-dialog-centered modal-dialog-zoom" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title">
+                    <h6 class="modal-title">
                         Select Category
-                    </h5>
+                    </h6>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <i class="ti-close"></i>
                     </button>
@@ -242,9 +242,9 @@
         <div class="modal-dialog modal-dialog-centered modal-dialog-zoom" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title">
+                    <h6 class="modal-title">
                         <i class="fa fa-users"></i> New Group
-                    </h5>
+                    </h6>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <i class="ti-close"></i>
                     </button>
@@ -303,9 +303,9 @@
         <div class="modal-dialog modal-dialog-centered modal-dialog-zoom" role="document">
             <div class="modal-content" style="width: 70%; left: 15%;">
                 <div class="modal-header">
-                    <h5 class="modal-title">
+                    <h6 class="modal-title">
                         <i class="ti-settings"></i> Setting Profile
-                    </h5>
+                    </h6>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <i class="ti-close"></i>
                     </button>
@@ -352,9 +352,7 @@
         <div class="modal-dialog modal-dialog-centered modal-dialog-zoom" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title">
-                        <i class="ti-settings"></i> Detail CWC
-                    </h5>
+                    <h6 class="modal-title">Detail CWC</h6>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <i class="ti-close"></i>
                     </button>
@@ -424,33 +422,125 @@
                             </div>
                         </div>
                     </div>
-                    <div class="row mr-0 ml-0 mt-2">
-                        <div class="col-sm-5 text-justify" style="border: 1px solid #B8BBBD; border-radius: 2px; margin-left:10px;">
-                            <span class="font13" style="background: #fff; position: absolute; margin-top: -10px; font-weight: 600;">Remark</span>
-                            <h6 class="font10 pt-3">
-                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
-                                has been the industry's standard dummy text ever since the 1500s, when an unknown
-                                printer took a galley of type and scrambled it to make a type specimen book.
-                            </h6>
+                    <div class="row mr-0 ml-0 mt-4">
+                        <span class="font1"
+                            style="background: #fff; position: absolute; margin-top: -9px; font-weight: 600;z-index: 99;margin-left: 20px;padding: 1px 4px;">Remark</span>
+                        <div class="col-sm-5 scrollbar text-justify" id="style-1"
+                            style="border: 1px solid #B8BBBD; border-radius: 2px; margin-left:10px; flex: 0 0 47% !important; max-width: 47% !important;">
+                            <div class="force-overflow">
+                                <h6 class="font10 pt-3">
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                                    Ipsum
+                                    has been the industry's standard dummy text ever since the 1500s, when an unknown
+                                    printer took a galley of type and scrambled it to make a type specimen book.
+                                </h6>
+                            </div>
                         </div>
 
-                        <div class="col-sm-5 mr-1 text-justify" style="border: 1px solid #B8BBBD; border-radius: 2px; margin-left:50px;">
-                            <span class="font13" style="background: #fff; position: absolute; margin-top: -10px; font-weight: 600;">Feedback</span>
-                            <h6 class="font10 pt-3">
-                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
-                                has been the industry's standard dummy text ever since the 1500s, when an unknown
-                                printer took a galley of type and scrambled it to make a type specimen book.
-                            </h6>
+                        <span class="font1"
+                            style="background: #fff; position: absolute; margin-top: -9px; font-weight: 600;z-index: 99;margin-left: 24em;padding: 1px 4px;">Feedback</span>
+                        <div class="col-sm-5 scrollbar text-justify" id="style-1"
+                            style="border: 1px solid #B8BBBD; border-radius: 2px; margin-left:10px; flex: 0 0 47% !important; max-width: 47% !important;">
+                            <div class="force-overflow">
+                                <h6 class="font10 pt-3">
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                                    Ipsum
+                                    has been the industry's standard dummy text ever since the 1500s, when an unknown
+                                    printer took a galley of type and scrambled it to make a type specimen book.
+                                </h6>
+                            </div>
                         </div>
-                    </div> 
+                    </div>
+
                 </div>
             </div>
         </div>
     </div>
     <!-- ./ Remark & Feedback modal -->
 
-    <div class="layout">
+    <!-- Interaction -->
+    <div class="modal fade" id="interactionModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-zoom" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h6 class="modal-title">Detail CWC</h6>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <i class="ti-close"></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <!-- <div class="chat"> -->
+                        <div class="message-1">
+                            <div class="message-column">
+                                <div class="message-column-item">
+                                    <div class="message-content-item">
+                                        Selamat pagi min, saya ingin bertanya perihal pengembalian barang
+                                    </div>
+                                </div>
+                                <div class="message-column-item">
+                                    <div class="message-content-item">
+                                        Refund nya juga min bagaimana?
+                                    </div>
+                                    <div class="message-detail">
+                                        May, 29 2018 22:45
+                                    </div>
+                                </div>
+                                <div class="message-sender">
+                                    <div class="message-sender-content text-muted">
+                                        Selamat pagi bu
+                                    </div>
+                                    <div class="message-detail">
+                                        May, 29 2018 22:45
+                                    </div>
+                                </div>
+                                <div class="message-column-item">
+                                    <div class="message-content-item">
+                                        Selamat pagi min, saya ingin bertanya perihal pengembalian barang
+                                    </div>
+                                </div>
+                                <div class="message-column-item">
+                                    <div class="message-content-item">
+                                        Refund nya juga min bagaimana?
+                                    </div>
+                                    <div class="message-detail">
+                                        May, 29 2018 22:45
+                                    </div>
+                                </div>
+                                <div class="message-sender">
+                                    <div class="message-sender-content text-muted">
+                                        Terimakasih telah menghubungi kami
+                                    </div>
+                                    <div class="message-detail">
+                                        May, 29 2018 22:45
+                                    </div>
+                                </div>
+                                <div class="message-column-item">
+                                    <div class="message-content-item">
+                                        Refund nya juga min bagaimana?
+                                    </div>
+                                    <div class="message-detail">
+                                        May, 29 2018 22:45
+                                    </div>
+                                </div>
+                                <div class="message-column-item">
+                                    <div class="message-content-item">
+                                        Refund nya juga min bagaimana?
+                                    </div>
+                                    <div class="message-detail">
+                                        May, 29 2018 22:45
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    <!-- </div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ./Interaction -->
 
+    <div class="layout">
         <!-- navigation -->
         <nav class="navigation">
             <div class="nav-group">
@@ -470,7 +560,7 @@
                                 class="material-icons">group</i></a>
                     </li>
                     <li>
-                        <a data-navigation-target="favorites" href="#">
+                        <a data-navigation-target="log_cwc" href="#">
                             <i class="fa fa-history"></i>
                         </a>
                     </li>
@@ -762,97 +852,7 @@
                 <!-- ./ Friends sidebar -->
 
                 <!-- Favorites sidebar -->
-                <div id="favorites" class="sidebar">
-                    <header>
-                        <span>Favorites</span>
-                        <ul class="list-inline">
-                            <li class="list-inline-item d-lg-none d-sm-block">
-                                <a href="#" class="btn btn-light sidebar-close">
-                                    <i class="ti-close"></i>
-                                </a>
-                            </li>
-                        </ul>
-                    </header>
-                    <form action="">
-                        <input type="text" class="form-control" placeholder="Search favorites">
-                    </form>
-                    <div class="sidebar-body">
-                        <ul class="list-group list-group-flush users-list">
-                            <li class="list-group-item">
-                                <div class="users-list-body">
-                                    <h6>Jennica Kindred</h6>
-                                    <p>I know how important this file is to you. You can trust me ;)</p>
-                                    <div class="users-list-action action-toggle">
-                                        <div class="dropdown">
-                                            <a data-toggle="dropdown" href="#">
-                                                <i class="ti-more"></i>
-                                            </a>
-                                            <div class="dropdown-menu dropdown-menu-right">
-                                                <a href="#" class="dropdown-item">View Chat</a>
-                                                <a href="#" class="dropdown-item">Forward</a>
-                                                <a href="#" class="dropdown-item">Delete</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="list-group-item">
-                                <div class="users-list-body">
-                                    <h6>Marvin Rohan</h6>
-                                    <p>Lorem ipsum dolor sitsdc sdcsdc sdcsdcs</p>
-                                    <div class="users-list-action action-toggle">
-                                        <div class="dropdown">
-                                            <a data-toggle="dropdown" href="#">
-                                                <i class="ti-more"></i>
-                                            </a>
-                                            <div class="dropdown-menu dropdown-menu-right">
-                                                <a href="#" class="dropdown-item">View Chat</a>
-                                                <a href="#" class="dropdown-item">Forward</a>
-                                                <a href="#" class="dropdown-item">Delete</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="list-group-item">
-                                <div class="users-list-body">
-                                    <h6>Frans Hanscombe</h6>
-                                    <p>Lorem ipsum dolor sitsdc sdcsdc sdcsdcs</p>
-                                    <div class="users-list-action action-toggle">
-                                        <div class="dropdown">
-                                            <a data-toggle="dropdown" href="#">
-                                                <i class="ti-more"></i>
-                                            </a>
-                                            <div class="dropdown-menu dropdown-menu-right">
-                                                <a href="#" class="dropdown-item">View Chat</a>
-                                                <a href="#" class="dropdown-item">Forward</a>
-                                                <a href="#" class="dropdown-item">Delete</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="list-group-item">
-                                <div class="users-list-body">
-                                    <h6>Karl Hubane</h6>
-                                    <p>Lorem ipsum dolor sitsdc sdcsdc sdcsdcs</p>
-                                    <div class="users-list-action action-toggle">
-                                        <div class="dropdown">
-                                            <a data-toggle="dropdown" href="#">
-                                                <i class="ti-more"></i>
-                                            </a>
-                                            <div class="dropdown-menu dropdown-menu-right">
-                                                <a href="#" class="dropdown-item">View Chat</a>
-                                                <a href="#" class="dropdown-item">Forward</a>
-                                                <a href="#" class="dropdown-item">Delete</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+                
                 <!-- ./ Stars sidebar -->
 
             </div>
@@ -944,6 +944,9 @@
             </div>
             <!-- ./ Chat Column -->
 
+            <div id="log_cwc">
+                   
+            </div>
 
             <!-- Right Column -->
             <div class="sidebar-group">
@@ -1089,7 +1092,8 @@
                                                     : Banking</h6>
                                             </div>
                                             <div class="col-md-6">
-                                                <button type="button" class="btn btn-sm btn-dark ml-4 font8" style="
+                                                <button type="button" class="btn btn-sm btn-dark ml-4 font8"
+                                                    data-toggle="modal" data-target="#interactionModal" style="
                                                 padding: 4px;">Interaction</button>
                                             </div>
                                         </div>
