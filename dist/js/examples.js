@@ -59,17 +59,13 @@ $(function () {
 
 });
 
-function nav_agent(){
-    $("#right-content").removeClass("active").prop("class","sidebar");
-}
+// function nav_agent(){
+//     $("#right2-content").removeClass("active").prop("class","sidebar");
+// }
 
-function nav_chat(){
-    $("#right-content").removeClass("sidebar").prop("class","sidebar active");
-}
-
-function nav_log_cwc(){
-    $("#right-content").removeClass("active").prop("class","sidebar");
-}
+// function nav_chat(){
+//     $("#right2-content").removeClass("sidebar").prop("class","sidebar active");
+// }
 
 function delete_status_bar(){
     console.log("sdadada");
@@ -85,4 +81,18 @@ function delete_status_bar(){
         .css({ cursor: 'pointer' })
         .removeAttr('href'); // <- this is what stops Chrome to display status bar
     });
+}
+
+function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
 }
