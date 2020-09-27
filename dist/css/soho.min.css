@@ -9019,6 +9019,11 @@ button.bg-dark:hover {
     background-color: transparent !important
 }
 
+.bg-blue{
+    background: #3A7094 !important;
+    color: #fff;
+}
+
 .border {
     border: 1px solid #dee2e6 !important
 }
@@ -21953,8 +21958,8 @@ body.form-membership .form-wrapper hr {
     border-bottom: 2px solid #e1e1e1;
     /* padding-bottom: 20px */
     padding: 10px;
-    background: #3A7094;
-    color: #fff;
+    background: #fff;
+    color: #333333;
 }
 
 .layout .content .chat .chat-header .chat-header-user {

@@ -70,13 +70,16 @@
             <div class="sidebar-group">
                 <!-- Chats sidebar -->
                 <div id="chats" class="sidebar w-300 active">
-                    <header class="bg-white">
-                        <h6 class="header-title">Conversation</h6>
+                    <header class="bg-blue">
+                        <h6 class="header-title">Workspace</h6>
                     </header>
                     <div class="tab">
-                        <button class="tablinks active" onclick="openCity(event, 'Chat')">Chat<span class="badge-1">5</span></button>
-                        <button class="tablinks" onclick="openCity(event, 'Call')">Call<span class="badge-1">3</span></button>
-                        <button class="tablinks" onclick="openCity(event, 'Video')">Video<span class="badge-1">1</span></button>
+                        <button class="tablinks active" onclick="openCity(event, 'Chat')">Chat<span
+                                class="badge-1">5</span></button>
+                        <button class="tablinks" onclick="openCity(event, 'Call')">Call<span
+                                class="badge-1">3</span></button>
+                        <button class="tablinks" onclick="openCity(event, 'Video')">Video<span
+                                class="badge-1">1</span></button>
                     </div>
 
                     <div id="Chat" class="tabcontent" style="display:block;">
@@ -87,9 +90,10 @@
                                         <span class="avatar-title bg-pink rounded-circle">NF</span>
                                     </figure>
                                     <div class="users-list-body">
-                                        <h6 class="label-name">Nada Fadhilah Fitriyani</h6>
+                                        <h6 class="label-name">Nada Fadhilah Fitriyani<i class="star_icon ml-1"></i></h6>
                                         <p>Lorem ipsum dolor sitsdc sdcsdc sdcsdcs</p>
                                     </div>
+                                    
                                     <h6 class="text-muted small label-date">12.00</h6>
                                 </li>
                                 <li class="list-group-item">
@@ -210,8 +214,25 @@
             <!-- Chat Column-->
             <div class="chat" id="middle">
                 <div class="chat-header">
-                    <div class="chat-header-user">
-                        <h6 class="text-chat-header">Nada Fadhilah Fitriyani</h6>
+                    <div class="d-flex flex-row">
+                        <div>
+                            <div class="chat-header-user">
+                                <h6 class="text-chat-header">Nada Fadhilah Fitriyani</h6>
+                            </div>
+                        </div>
+                        <div class="ml-3 pt-2">
+                            <button class="btn btn-yellow-outline">
+                                <div class="d-flex flex-row pt-1">
+                                    <div>
+                                        <i class="star_icon mr-2"></i>
+                                    </div>
+                                    <div>
+                                        <h6 class="font-yellow-prio">Priority</h6>
+                                    </div>
+                                </div>
+                                
+                            </button>
+                        </div>
                     </div>
                     <div class="chat-header-action">
                         <ul class="list-inline">
