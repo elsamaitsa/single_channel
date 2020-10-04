@@ -1,0 +1,509 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Infomedia</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="dist/media/img/favicon.png" type="image/png">
+
+    <!-- Soho css -->
+    <link rel="stylesheet" href="dist/css/soho.min.css">
+
+    <link rel="stylesheet" href="./dist/css/app.css">
+    <link rel="stylesheet" href="./dist/css/custom.css">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://emoji-css.afeld.me/emoji.css" rel="stylesheet">
+    <script src="./vendor/jquery-3.4.1.min.js"></script>
+    <!-- js tambahan -->
+    <!-- <script src="./dist/js/w3-include.js"></script> -->
+</head>
+
+<body>
+    <!-- page loading -->
+    <div class="page-loading"></div>
+    <!-- ./ page loading -->
+
+    <div class="layout">
+        <!-- navigation -->
+        <nav class="navigation">
+            <div class="nav-group">
+                <ul>
+                    <li>
+                        <a class="logo" href="#">
+                            <i class="logo_chat_icon"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a data-navigation-target="#" href="#">
+                            <i class="signal_1_icon"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a data-navigation-target="chats" class="active" href="javascript:nav_chat()">
+                            <i class="conversation_icon"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a data-navigation-target="chat_agent" href="javascript:nav_agent()"><i
+                                class="material-icons text-white" style="font-size: 24px;">group</i></a>
+                    </li>
+                    <li style="margin-top: 37.5em;">
+                        <a href="./login.html">
+                            <i class="ti-power-off text-white"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!-- ./ navigation -->
+
+        <!-- content -->
+        <div class="content">
+
+            <!-- Left Column -->
+            <div class="sidebar-group">
+                <!-- Chats sidebar -->
+                <div id="chats" class="sidebar w-300 active">
+                    <header class="bg-blue">
+                        <h6 class="header-title">Workspace</h6>
+                    </header>
+                    <div class="tab">
+                        <button class="tablinks" onclick="openCity(event, 'Chat')">Chat<span
+                                class="badge-1">5</span></button>
+                        <button class="tablinks active" onclick="openCity(event, 'Call')">Call<span
+                                class="badge-1">3</span></button>
+                        <button class="tablinks" onclick="openCity(event, 'Video')">Video<span
+                                class="badge-1">1</span></button>
+                    </div>
+
+                    <div id="Chat" class="tabcontent">
+                        <div class="sidebar-body">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item  open-chat">
+                                    <figure class="avatar">
+                                        <span class="avatar-title bg-pink rounded-circle">NF</span>
+                                    </figure>
+                                    <div class="users-list-body">
+                                        <h6 class="label-name">Nada Fadhilah Fitriyani<i class="star_icon ml-1"></i>
+                                        </h6>
+                                        <p>Lorem ipsum dolor sitsdc sdcsdc sdcsdcs</p>
+                                    </div>
+
+                                    <h6 class="text-muted small label-date">12.00</h6>
+                                </li>
+                                <li class="list-group-item">
+                                    <div>
+                                        <figure class="avatar">
+                                            <span class="avatar-title bg-blue rounded-circle">NF</span>
+                                        </figure>
+                                    </div>
+                                    <div class="users-list-body">
+                                        <h6 class="label-name">+62 85 - 899 - 125 - 810</h6>
+                                        <p><span class="text-red">Draft : </span>Lorem ipsum dolor sitsdc sdcsdc sdcsdcs
+                                        </p>
+                                    </div>
+                                    <h6 class="text-muted small label-date">Yesterday</h6>
+                                </li>
+
+                                <li class="list-group-item">
+                                    <div>
+                                        <figure class="avatar">
+                                            <span class="avatar-title bg-info rounded-circle">NF</span>
+                                        </figure>
+                                    </div>
+                                    <div class="users-list-body">
+                                        <h6 class="label-name">Nada Fadhilah Fitriyani</h6>
+                                        <p>Lorem ipsum dolor sitsdc sdcsdc sdcsdcs</p>
+                                    </div>
+                                    <h6 class="text-muted small label-date">21/09/20</h6>
+                                </li>
+                                <li class="list-group-item">
+                                    <div>
+                                        <figure class="avatar">
+                                            <span class="avatar-title bg-orange rounded-circle">NF</span>
+                                        </figure>
+                                    </div>
+                                    <div class="users-list-body">
+                                        <h6 class="label-name">Nada Fadhilah Fitriyani</h6>
+                                        <p>Lorem ipsum dolor sitsdc sdcsdc sdcsdcs</p>
+                                    </div>
+                                    <h6 class="text-muted small label-date">21/09/20</h6>
+                                </li>
+                                <li class="list-group-item">
+                                    <div>
+                                        <figure class="avatar">
+                                            <span class="avatar-title bg-primary rounded-circle">NF</span>
+                                        </figure>
+                                    </div>
+                                    <div class="users-list-body">
+                                        <h6 class="label-name">Nada Fadhilah Fitriyani</h6>
+                                        <p>Lorem ipsum dolor sitsdc sdcsdc sdcsdcs</p>
+                                    </div>
+                                    <h6 class="text-muted small label-date">21/09/20</h6>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div id="Call" class="tabcontent" style="display:block;">
+                        <div class="sidebar-body">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item  open-chat">
+                                    <figure class="avatar">
+                                        <span class="avatar-title bg-pink rounded-circle">NF</span>
+                                    </figure>
+                                    <div class="users-list-body">
+                                        <h6 class="label-name">Nada Fadhilah Fitriyani</h6>
+                                        <p class="font12"><i class="phone_call_icon mr-1"></i>Ongoing Call...</p>
+                                    </div>
+                                    <h6 class="text-muted small label-date">12.00</h6>
+                                </li>
+                                <li class="list-group-item">
+                                    <figure class="avatar">
+                                        <span class="avatar-title bg-info rounded-circle">NF</span>
+                                    </figure>
+                                    <div class="users-list-body">
+                                        <h6 class="label-name">Nada Fadhilah Fitriyani</h6>
+                                        <p class="font12"><i class="phone_call_icon mr-1"></i>03:50</p>
+                                    </div>
+                                    <h6 class="text-muted small label-date">11.00</h6>
+                                </li>
+                                <li class="list-group-item">
+                                    <figure class="avatar">
+                                        <span class="avatar-title bg-info rounded-circle">NF</span>
+                                    </figure>
+                                    <div class="users-list-body">
+                                        <h6 class="label-name">Nada Fadhilah Fitriyani</h6>
+                                        <p class="font12"><i class="phone_call_icon mr-1"></i>04:57</p>
+                                    </div>
+                                    <h6 class="text-muted small label-date">10.30</h6>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div id="Video" class="tabcontent">
+                        <div class="sidebar-body">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item  open-chat">
+                                    <figure class="avatar">
+                                        <span class="avatar-title bg-pink rounded-circle">NF</span>
+                                    </figure>
+                                    <div class="users-list-body">
+                                        <h6 class="label-name">Nada Fadhilah Fitriyani</h6>
+                                        <p class="font12"><i class="phone_call_icon mr-1"></i>Ongoing Video Call...</p>
+                                    </div>
+                                    <h6 class="text-muted small label-date">12.00</h6>
+                                </li>
+                                <li class="list-group-item">
+                                    <figure class="avatar">
+                                        <span class="avatar-title bg-info rounded-circle">NF</span>
+                                    </figure>
+                                    <div class="users-list-body">
+                                        <h6 class="label-name">Nada Fadhilah Fitriyani</h6>
+                                        <p class="font12"><i class="phone_call_icon mr-1"></i>03:50</p>
+                                    </div>
+                                    <h6 class="text-muted small label-date">11.00</h6>
+                                </li>
+                                <li class="list-group-item">
+                                    <figure class="avatar">
+                                        <span class="avatar-title bg-info rounded-circle">NF</span>
+                                    </figure>
+                                    <div class="users-list-body">
+                                        <h6 class="label-name">Nada Fadhilah Fitriyani</h6>
+                                        <p class="font12"><i class="phone_call_icon mr-1"></i>04:57</p>
+                                    </div>
+                                    <h6 class="text-muted small label-date">10.30</h6>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- ./ Chats sidebar -->
+
+            </div>
+            <!-- ./ Left Column -->
+
+            <!-- Chat Column-->
+            <div class="chat" id="middle">
+                <div class="chat-header">
+                    <div class="d-flex flex-row">
+                        <div>
+                            <div class="chat-header-user">
+                                <h6 class="text-chat-header">Nada Fadhilah Fitriyani</h6>
+                            </div>
+                        </div>
+                        <div class="ml-3 pt-2">
+                            <button class="btn btn-yellow-outline">
+                                <div class="d-flex flex-row pt-1">
+                                    <div>
+                                        <i class="star_icon mr-2"></i>
+                                    </div>
+                                    <div>
+                                        <h6 class="font-yellow-prio">Priority</h6>
+                                    </div>
+                                </div>
+
+                            </button>
+                        </div>
+                    </div>
+                    <div class="chat-header-action">
+                        <ul class="list-inline">
+                            <li class="list-inline-item" style="margin-top:4px !important;">
+                                <a href="#" class="btn btn-sm btn-red font11"
+                                    style="border-radius: 20px; padding: 5px 20px;">
+                                    End Chat
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="chat-body3">
+                    <div class="text-center" style="margin-top: 12em;">
+                        <h6 style="font-weight: 600; color: #fff;">Ongoing Call</h6>
+                        <div style="background: #DADDE4;
+                        padding: 15px 15px;
+                        margin: 1em 21.7em;
+                        border-radius: 50%;">
+                            <div style="background: #E5E7EC;
+                            padding: 13px;
+                            border-radius: 50%;">
+                                <figure class="avatar" style="height: 8em; width: 8em;">
+                                    <span class="avatar-title bg-pink rounded-circle"
+                                        style="font-size: 45px; font-weight: 600;">NF</span>
+                                </figure>
+                            </div>
+                        </div>
+                        <h6 style="font-weight: 600; color: #fff;">04:10:23</h6>
+                    </div>
+                </div>
+                <div class="chat-footer bg-white">
+                    <div class="text-center">
+                        <button class="btn btn-circle-outline pd-9 mr-3"><i class="voice_icon wd-28"></i></button>
+                        <button class="btn mr-3"><i class="end_call_icon"></i></button>
+                        <button class="btn btn-circle-outline pd-9 mr-3"><i class="nodes_icon wd-28 pd-5"></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column -->
+            <div class="sidebar-group">
+                <!-- Chats sidebar -->
+                <div class="sidebar active w-300" style="border-radius: 0px; margin-left: 1px;">
+                    <header class="bg-white">
+                        <h6 class="header-title">Customer Information</h6>
+                    </header>
+
+                    <div class="wrapper center-block">
+                        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                            <div class="panel panel-default">
+                                <div class="panel-heading" role="tab" id="headingOne">
+                                    <h4 class="panel-title">
+                                        <a role="button" data-toggle="collapse" data-parent="#accordion"
+                                            href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                            <div class="d-flex flex-row mg-73">
+                                                <div><i class="user_icon mr-2"></i></div>
+                                                <div class="mt-05 font12">Customer Profile</div>
+                                            </div>
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapseOne" class="panel-collapse collapse in collapse show" role="tabpanel"
+                                    aria-labelledby="headingOne">
+                                    <div class="panel-body">
+                                        <div class="row">
+                                            <div class="col-sm-4">
+                                                <h6 class="text-grey font12 font-normal">Cust ID</h6>
+                                            </div>
+                                            <div class="col-sm-8">
+                                                <h6 class="text-black font12 ml-2">023232022</h6>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-4">
+                                                <h6 class="text-grey font12 font-normal pt-2">Cust Name</h6>
+                                            </div>
+                                            <div class="col-sm-8">
+                                                <input type="text" class="form-control no-border font12"
+                                                    value="Nada Fadhilah Fitriyani">
+                                                <i class="pencil_2_icon pencil_input"></i>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-4">
+                                                <h6 class="text-grey font12 font-normal pt-2">Priority</h6>
+                                            </div>
+                                            <div class="col-sm-8">
+                                                <input type="text" class="form-control no-border font12"
+                                                    value="Priority">
+                                                <i class="pencil_2_icon pencil_input"></i>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-4">
+                                                <h6 class="text-grey font12 font-normal pt-2">Address</h6>
+                                            </div>
+                                            <div class="col-sm-8">
+                                                <input type="text" class="form-control no-border font12"
+                                                    value="Jl. Gotong Royong">
+                                                <i class="pencil_2_icon pencil_input"></i>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-4">
+                                                <h6 class="text-grey font12 font-normal pt-2">Email</h6>
+                                            </div>
+                                            <div class="col-sm-8">
+                                                <input type="text" class="form-control no-border font12"
+                                                    value="nadaff@gmail.com">
+                                                <i class="pencil_2_icon pencil_input"></i>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-4">
+                                                <h6 class="text-grey font12 font-normal pt-2">Company</h6>
+                                            </div>
+                                            <div class="col-sm-8">
+                                                <input type="text" class="form-control no-border font12" value="-">
+                                                <i class="pencil_2_icon pencil_input"></i>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-4">
+                                                <h6 class="text-grey font12 font-normal pt-2">HP</h6>
+                                            </div>
+                                            <div class="col-sm-8">
+                                                <input type="text" class="form-control no-border font12"
+                                                    value="(+62) 85 899 125 810">
+                                                <i class="pencil_2_icon pencil_input"></i>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-4">
+                                                <h6 class="text-grey font12 font-normal pt-2">Phone</h6>
+                                            </div>
+                                            <div class="col-sm-8">
+                                                <input type="text" class="form-control no-border font12"
+                                                    value="(021) 847484">
+                                                <i class="pencil_2_icon pencil_input"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading" role="tab" id="headingTwo">
+                                    <h4 class="panel-title">
+                                        <a class="collapsed" role="button" data-toggle="collapse"
+                                            data-parent="#accordion" href="#collapseTwo" aria-expanded="false"
+                                            aria-controls="collapseTwo">
+                                            <div class="d-flex flex-row mg-73">
+                                                <div><i class="clipboard_outline_icon mr-2"></i></div>
+                                                <div class="mt-1 font12">Summary Interaction</div>
+                                            </div>
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapseTwo" class="panel-collapse collapse in show" role="tabpanel"
+                                    aria-labelledby="headingTwo">
+                                    <div class="panel-body">
+                                        <div class="row">
+                                            <div class="col-sm-4">
+                                                <h6 class="text-grey font12 font-normal pt-2">Category</h6>
+                                            </div>
+                                            <div class="col-sm-8">
+                                                <input type="text" class="form-control no-border font12" value="">
+                                                <a href="#" class="pencil_input text-blue-1 font-weight-bold"
+                                                    style="margin-left: 11.5em;">Select</a>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-4">
+                                                <h6 class="text-grey font12 font-normal pt-2">Sub Category</h6>
+                                            </div>
+                                            <div class="col-sm-8">
+                                                <input type="text" class="form-control no-border font12" value="">
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-4">
+                                                <h6 class="text-grey font12 font-normal pt-2">Remark</h6>
+                                            </div>
+                                            <div class="col-sm-8">
+                                                <textarea class="form-control no-border font12" rows="2"></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-4">
+                                                <h6 class="text-grey font12 font-normal pt-2">Feedback</h6>
+                                            </div>
+                                            <div class="col-sm-8">
+                                                <textarea class="form-control no-border font12" rows="2"></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="row mt-1">
+                                            <div class="col-sm-4">
+                                                <h6 class="text-grey font12 font-normal pt-2">Sentimen</h6>
+                                            </div>
+                                            <div class="col-sm-8">
+                                                <div class="d-flex flex-row">
+                                                    <div><i class="emoji_smile_icon"></i></div>
+                                                    <div><i class="emoji_flat_icon"></i></div>
+                                                    <div><i class="emoji_sad_icon"></i></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <button type="button" class="btn btn-block btn-yellow btn-md mt-3">Save</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- ./ Chats sidebar -->
+        </div>
+        <!-- ./ Right Column -->
+    </div>
+    <!-- ./ content -->
+
+    </div>
+    <!-- layout -->
+
+
+    <!-- Popper.js -->
+    <script src="./vendor/popper.min.js"></script>
+
+    <!-- Bootstrap -->
+    <script src="./vendor/bootstrap/bootstrap.min.js"></script>
+
+    <!-- Nicescroll -->
+    <script src="./vendor/jquery.nicescroll.min.js"></script>
+
+    <!-- Soho -->
+    <script src="./dist/js/soho.min.js"></script>
+
+    <!-- Examples -->
+    <script src="./dist/js/examples.js"></script>
+    <script>
+        (function ($) {
+            $('.panel-collapse').on('show.bs.collapse', function () {
+                $(this).siblings('.panel-heading').addClass('active');
+            });
+
+            $('.panel-collapse').on('hide.bs.collapse', function () {
+                $(this).siblings('.panel-heading').removeClass('active');
+            });
+        });
+    </script>
+</body>
+
+</html>

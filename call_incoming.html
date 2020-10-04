@@ -20,6 +20,11 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://emoji-css.afeld.me/emoji.css" rel="stylesheet">
     <script src="./vendor/jquery-3.4.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#modalCalling").modal('show');
+        });
+    </script>
     <!-- js tambahan -->
     <!-- <script src="./dist/js/w3-include.js"></script> -->
 </head>
@@ -74,12 +79,12 @@
                         <h6 class="header-title">Workspace</h6>
                     </header>
                     <div class="tab">
-                        <button class="tablinks active" onclick="openCity(event, 'Chat')">Chat</button>
-                        <button class="tablinks" onclick="openCity(event, 'Call')">Call</button>
+                        <button class="tablinks" onclick="openCity(event, 'Chat')">Chat</button>
+                        <button class="tablinks active" onclick="openCity(event, 'Call')">Call</button>
                         <button class="tablinks" onclick="openCity(event, 'Video')">Video</button>
                     </div>
 
-                    <div id="Chat" class="tabcontent" style="display:block;">
+                    <div id="Chat" class="tabcontent">
                         <div class="sidebar-body">
                             <div class="mg-waiting">
                                 <i class="waiting_icon"></i>
@@ -88,7 +93,7 @@
                         </div>
                     </div>
 
-                    <div id="Call" class="tabcontent">
+                    <div id="Call" class="tabcontent" style="display:block;">
                         <div class="sidebar-body">
                             <div class="mg-waiting">
                                 <i class="waiting_icon"></i>
@@ -141,7 +146,23 @@
     </div>
     <!-- layout -->
 
-
+    <div id="modalCalling" class="modal fade">
+        <div class="modal-dialog modalIncoming">
+            <div class="modal-content bg-dark-transparent">
+                <div class="modal-body p-35">
+                    <div class="text-center">
+                        <figure class="avatar mb-4 h-5rem">
+                            <span class="avatar-title bg-pink rounded-circle font-40">NF</span>
+                        </figure>
+                        <p class="text-call">Nada Fadhilah is calling......</p>
+                        <div class="mt-4">
+                            <i class="end_call_icon mr-5"></i><i class="calling_icon"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- Popper.js -->
     <script src="./vendor/popper.min.js"></script>
 
@@ -156,17 +177,6 @@
 
     <!-- Examples -->
     <script src="./dist/js/examples.js"></script>
-    <script>
-        (function ($) {
-            $('.panel-collapse').on('show.bs.collapse', function () {
-                $(this).siblings('.panel-heading').addClass('active');
-            });
-
-            $('.panel-collapse').on('hide.bs.collapse', function () {
-                $(this).siblings('.panel-heading').removeClass('active');
-            });
-        });
-    </script>
 </body>
 
 </html>
