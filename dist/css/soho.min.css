@@ -21424,7 +21424,7 @@ body.dark figure.avatar.avatar-state-warning:before {
     border-color: #464852
 }
 
-body.form-membership {
+.form-membership {
     /* background: url(../media/img/bg.png) #fff; */
     background-attachment: fixed;
     -webkit-background-size: cover;
@@ -21433,7 +21433,7 @@ body.form-membership {
     padding: 3rem 0
 }
 
-body.form-membership .form-wrapper {
+.form-membership .form-wrapper {
     background-color: #fff;
     padding: 3rem;
     -webkit-border-radius: 5px;
@@ -21445,7 +21445,7 @@ body.form-membership .form-wrapper {
     box-shadow: 0px 4px 6px #888888;
 }
 
-body.form-membership .form-wrapper .logo {
+.form-membership .form-wrapper .logo {
     background-color: #fff;
     width: 100px;
     -webkit-border-radius: 50%;
@@ -21474,16 +21474,16 @@ body.form-membership .form-wrapper .logo {
     margin-right: auto
 }
 
-body.form-membership .form-wrapper h5 {
+.form-membership .form-wrapper h5 {
     text-align: center;
     margin-bottom: 2rem
 }
 
-body.form-membership .form-wrapper form .form-control {
+.form-membership .form-wrapper form .form-control {
     margin-bottom: 1.5rem
 }
 
-body.form-membership .form-wrapper hr {
+.form-membership .form-wrapper hr {
     margin: 2rem 0
 }
 
