@@ -21425,7 +21425,7 @@ body.dark figure.avatar.avatar-state-warning:before {
 }
 
 body.form-membership {
-    background: url(../media/img/bg.png) #fff;
+    /* background: url(../media/img/bg.png) #fff; */
     background-attachment: fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
