@@ -21438,10 +21438,11 @@ body.form-membership .form-wrapper {
     padding: 3rem;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
-    border-radius: 5px;
+    border-radius: 10px;
     width: 430px;
     margin: 50px auto;
-    text-align: center
+    text-align: center;
+    box-shadow: 0px 4px 6px #888888;
 }
 
 body.form-membership .form-wrapper .logo {
