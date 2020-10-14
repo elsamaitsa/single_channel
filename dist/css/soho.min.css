@@ -22265,14 +22265,7 @@ body.form-membership .form-wrapper hr {
 
 .p0{
     padding:0px !important;
-}
-.icon-speaker{
-    background: url('../../img/speaker.svg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    min-height: 50px;
-}
+} 
 
 .card-journey{
     margin: 10px;
