@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Infomedia</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="dist/media/img/favicon.png" type="image/png">
+
+    <!-- Soho css -->
+    <link rel="stylesheet" href="dist/css/soho.min.css">
+
+    <link rel="stylesheet" href="./dist/css/app.css">
+    <link rel="stylesheet" href="./dist/css/custom.css">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://emoji-css.afeld.me/emoji.css" rel="stylesheet">
+    <script src="./vendor/jquery-3.4.1.min.js"></script>
+    <!-- js tambahan -->
+    <!-- <script src="./dist/js/w3-include.js"></script> -->
+</head>
+
+<body>
+    <!-- page loading -->
+    <div class="page-loading"></div>
+    <!-- ./ page loading -->
+
+    <div class="layout">
+        <!-- navigation -->
+        <nav class="navigation">
+            <div class="nav-group">
+                <ul>
+                    <li>
+                        <a class="logo" href="#">
+                            <i class="logo_chat_icon"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a data-navigation-target="#" class="active" href="#">
+                            <i class="signal_1_icon active"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a data-navigation-target="chats" href="javascript:nav_chat()">
+                            <i class="conversation_icon_white"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a data-navigation-target="chat_agent" href="javascript:nav_agent()"><i
+                                class="material-icons text-white" style="font-size: 24px;">group</i></a>
+                    </li>
+                    <li style="margin-top: 37.5em;">
+                        <a href="./login.html">
+                            <i class="ti-power-off text-white"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!-- ./ navigation -->
+
+        <!-- content -->
+        <div class="content2">
+            <div class="header_agent">
+                <h6 class="text-blue-1 header_text">Hello, Amelia. Have a good day! :)</h6>
+            </div>
+            <div class="d-flex flex-row mt-5">
+                <div class="card-agent-2 text-center">
+                    <img src="img/svg/Welcome_1.svg">
+                    <h6 class="label-name">Amelia Andini</h6>
+                </div>
+                <div class="card-agent-2 text-center">
+                    <h6 class="text-card">Your Daily Handled</h6>
+                    <canvas id="doughnut-chart1" ></canvas>
+                </div>
+                <div class="card-agent-2 text-center">
+                    <h6 class="text-card">Your Achievement</h6>
+                </div>
+                <div class="card-agent-2"></div>
+            </div>
+            <div class="card_agent mt-5">
+                <div class="float-right">
+                    <select class="form-control" style="width: 150px;">
+                        <option>Weekly</option>
+                    </select>
+                </div>
+                <h6 class="text-blue-1 header_text mt-5 mb-20">Agent Performance</h6>
+                <div class="row mt-5">
+                    <div class="col-sm-4">
+                        <h6 class="label-day">Yesterday <span class="label-title ml-2">Monday, 19 October 2020</span>
+                        </h6>
+                        <div class="d-flex flex-row" style="margin:5px 0px;">
+                            <div class="bg-blue1 card-agent-1">
+                                <div class="d-flex flex-row">
+                                    <div class="pt-17"><img src="img/svg/Done_9.svg"></div>
+                                    <div class="ml-3">
+                                        <h6 class="label-1">00:09:01</h6>
+                                        <h6 class="label-art">Average Response Time</h6>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bg-blue1 card-agent-1 ml-1">
+                                <div class="d-flex flex-row">
+                                    <div class="pt-17"><img src="img/svg/Done_9.svg"></div>
+                                    <div class="ml-3">
+                                        <h6 class="label-1">00:09:01</h6>
+                                        <h6 class="label-art">Average Response Time</h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-row" style="margin:5px 0px;">
+                            <div class="bg-green2 card-agent-1" style="padding: 17px 15px;">
+                                <div class="d-flex flex-row">
+                                    <div class="pt-17"><img src="img/svg/Done_9.svg"></div>
+                                    <div class="ml-3">
+                                        <h6 class="label-1">97%</h6>
+                                        <h6 class="label-art">Success Call Rate</h6>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bg-yellow card-agent-1 ml-1" style="padding: 17px 15px;">
+                                <div class="d-flex flex-row">
+                                    <div class="pt-17"><img src="img/svg/Done_9.svg"></div>
+                                    <div class="ml-3">
+                                        <h6 class="label-1 text-blue-1">205</h6>
+                                        <h6 class="label-art text-grey1">Call Overed</h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <h6 class="label-day">This Day <span class="label-title ml-2">Tuesday, 20 October 2020</span>
+                        </h6>
+                        <div class="d-flex flex-row" style="margin:5px 0px;">
+                            <div class="bg-blue1 card-agent-1">
+                                <div class="d-flex flex-row">
+                                    <div class="pt-17"><img src="img/svg/Done_9.svg"></div>
+                                    <div class="ml-3">
+                                        <h6 class="label-1">00:09:01</h6>
+                                        <h6 class="label-art">Average Response Time</h6>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bg-blue1 card-agent-1 ml-1">
+                                <div class="d-flex flex-row">
+                                    <div class="pt-17"><img src="img/svg/Done_9.svg"></div>
+                                    <div class="ml-3">
+                                        <h6 class="label-1">00:09:01</h6>
+                                        <h6 class="label-art">Average Response Time</h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-row" style="margin:5px 0px;">
+                            <div class="bg-green2 card-agent-1" style="padding: 17px 15px;">
+                                <div class="d-flex flex-row">
+                                    <div class="pt-17"><img src="img/svg/Done_9.svg"></div>
+                                    <div class="ml-3">
+                                        <h6 class="label-1">97%</h6>
+                                        <h6 class="label-art">Success Call Rate</h6>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bg-yellow card-agent-1 ml-1" style="padding: 17px 15px;">
+                                <div class="d-flex flex-row">
+                                    <div class="pt-17"><img src="img/svg/Done_9.svg"></div>
+                                    <div class="ml-3">
+                                        <h6 class="label-1 text-blue-1">205</h6>
+                                        <h6 class="label-art text-grey1">Call Overed</h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <h6 class="label-day">This Month <span class="label-title ml-2">Monday, October 2020</span></h6>
+                        <div class="d-flex flex-row" style="margin:5px 0px;">
+                            <div class="bg-blue1 card-agent-1">
+                                <div class="d-flex flex-row">
+                                    <div class="pt-17"><img src="img/svg/Done_9.svg"></div>
+                                    <div class="ml-3">
+                                        <h6 class="label-1">00:09:01</h6>
+                                        <h6 class="label-art">Average Response Time</h6>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bg-blue1 card-agent-1 ml-1">
+                                <div class="d-flex flex-row">
+                                    <div class="pt-17"><img src="img/svg/Done_9.svg"></div>
+                                    <div class="ml-3">
+                                        <h6 class="label-1">00:09:01</h6>
+                                        <h6 class="label-art">Average Response Time</h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-row" style="margin:5px 0px;">
+                            <div class="bg-green2 card-agent-1" style="padding: 17px 15px;">
+                                <div class="d-flex flex-row">
+                                    <div class="pt-17"><img src="img/svg/Done_9.svg"></div>
+                                    <div class="ml-3">
+                                        <h6 class="label-1">97%</h6>
+                                        <h6 class="label-art">Success Call Rate</h6>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bg-yellow card-agent-1 ml-1" style="padding: 17px 15px;">
+                                <div class="d-flex flex-row">
+                                    <div class="pt-17"><img src="img/svg/Done_9.svg"></div>
+                                    <div class="ml-3">
+                                        <h6 class="label-1 text-blue-1">205</h6>
+                                        <h6 class="label-art text-grey1">Call Overed</h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- ./ content -->
+
+    </div>
+    <!-- layout -->
+
+
+    <!-- Popper.js -->
+    <script src="./vendor/popper.min.js"></script>
+
+    <!-- Bootstrap -->
+    <script src="./vendor/bootstrap/bootstrap.min.js"></script>
+
+    <!-- Nicescroll -->
+    <script src="./vendor/jquery.nicescroll.min.js"></script>
+
+    <!-- Soho -->
+    <script src="./dist/js/soho.min.js"></script>
+
+    <!-- Examples -->
+    <script src="./dist/js/examples.js"></script>
+    
+    <!-- Chart -->
+    <script src="./src/js/chart.min.js"></script>
+    <script src="./src/js/chartjs-plugin-labels.js"></script>
+    <script src="./dist/js/donut-chart.js"></script>
+    <script>
+        (function ($) {
+            $('.panel-collapse').on('show.bs.collapse', function () {
+                $(this).siblings('.panel-heading').addClass('active');
+            });
+
+            $('.panel-collapse').on('hide.bs.collapse', function () {
+                $(this).siblings('.panel-heading').removeClass('active');
+            });
+        });
+    </script>
+</body>
+
+</html>
