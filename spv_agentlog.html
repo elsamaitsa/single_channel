@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Infomedia</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="dist/media/img/favicon.png" type="image/png">
+
+    <!-- Recently Added -->
+    <link rel="stylesheet" href="./vendor/bootstrap/bootstrap.min.css">
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- datatatables -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.22/css/dataTables.bootstrap4.min.css">
+
+    <!-- Soho css -->
+    <link rel="stylesheet" href="dist/css/soho.min.css">
+
+    <link rel="stylesheet" href="./dist/css/app.css">
+    <link rel="stylesheet" href="./dist/css/custom.css">
+
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://emoji-css.afeld.me/emoji.css" rel="stylesheet">
+    <script src="./vendor/jquery-3.4.1.min.js"></script>
+
+    <!-- js tambahan -->
+    <!-- <script src="./dist/js/w3-include.js"></script> -->
+</head>
+
+<body>
+    <!-- page loading -->
+    <div class="page-loading"></div>
+    <!-- ./ page loading -->
+
+    <!-- Side Menu -->
+    <div class="nav-side-menu">
+        <div class="brand">
+            <i class="logo_chat_icon"></i>
+            <h5 class="label-head">Blah blah</h5>
+        </div>
+        <i class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>
+
+        <div class="menu-list mt-2">
+
+            <ul id="menu-content" class="menu-content collapse out">
+
+                <li data-toggle="collapse" data-target="#master_data" class="collapsed active">
+                    <a href="#"><i class="ic category_icon"></i>Master Data<span class="arrow"></span></a>
+                </li>
+                <ul class="sub-menu collapse ul-font" id="master_data">
+                    <li class="active"><a href="spv_category.html">Category</a></li>
+                    <li><a href="spv_subcategory.html">Sub Category</a></li>
+                </ul>
+
+
+                <li data-toggle="collapse" data-target="#report" class="collapsed">
+                    <a href="#"><i class="ic chart_icon"></i> Reports <span class="arrow"></span></a>
+                </li>
+                <ul class="sub-menu collapse ul-font" id="report">
+                    <li><a href="spv_agentlog.html">Agent Log</a></li>
+                    <li><a href="spv_interactionreport.html">Interaction Report</a></li>
+                </ul>
+            </ul>
+        </div>
+    </div>
+    <!-- /Side Menu -->
+
+    <div class="container-right">
+        <div class="header-top">
+            <div class="header-grid">
+                <i class="bell_icon" style="margin-right:12px;"></i>
+                <img src="img/orange.jpg" class="img-user">
+                <div class="div-name">
+                    <h6 class="font-user">John Doe</h6>
+                    <h6 class="font-staff">Supervisor (2001)</h6>
+                </div>
+                <div class="dropdown">
+                    <a class="dropbtn"><i class="chevron_bottom_icon"></i></a>
+                    <div class="dropdown-content">
+                        <a href="#">Profile</a>
+                        <a href="#">Setting</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="header-title1">
+            <h6 class="font-title1">Agent Log
+            </h6>
+            <div style="margin-left:auto;">
+                <div class="d-flex flex-row">
+                    <div>
+                        <input type="text" class="form-control" style="border-radius: 0px;">
+                    </div>
+                    <div>
+                        <input type="text" class="form-control ml-1" style="border-radius: 0px;">
+                    </div>
+                    <div class="ml-1">
+                        <button class="btn btn-blue ml-1" type="button" data-toggle="modal" data-target="#addNewAgentLog"><i class="fa fa-plus mr-1"></i>Add New</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div style="margin:8px;">
+            <table id="example" class="table table-borderless" style="width:100%">
+                <thead class="thead-1 text-center">
+                    <tr>
+                        <th style="width:18px;"><input type="checkbox" class="form-control" style="font-size: 0px;">
+                        </th>
+                        <th>Agent ID</th>
+                        <th>Agent Name</th>
+                        <th>Login Status</th>
+                        <th>Reason</th>
+                        <th>Time Start</th>
+                        <th>End Start</th>
+                        <th class="text-center" style="width:70px;">Action</th>
+                    </tr>
+                </thead>
+                <tbody class="tbody-1 text-center">
+                    <tr>
+                        <td><input type="checkbox" class="form-control" style="font-size: 0px;"></td>
+                        <td>2001</td>
+                        <td>Jashinta Shanindita</td>
+                        <td>Login</td>
+                        <td>Istirahat</td>
+                        <td>12:03:12</td>
+                        <td>01:00:30</td>
+                        <td><i class="edit_pencil_icon mr-2"></i> <i class="delete_icon"></i></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" class="form-control" style="font-size: 0px;"></td>
+                        <td>2001</td>
+                        <td>Jashinta Shanindita</td>
+                        <td>Logout</td>
+                        <td>Istirahat</td>
+                        <td>12:03:12</td>
+                        <td>01:00:30</td>
+                        <td><i class="edit_pencil_icon mr-2"></i> <i class="delete_icon"></i></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" class="form-control" style="font-size: 0px;"></td>
+                        <td>2001</td>
+                        <td>Jashinta Shanindita</td>
+                        <td>AUX</td>
+                        <td>Istirahat</td>
+                        <td>12:03:12</td>
+                        <td>01:00:30</td>
+                        <td><i class="edit_pencil_icon mr-2"></i> <i class="delete_icon"></i></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" class="form-control" style="font-size: 0px;"></td>
+                        <td>2001</td>
+                        <td>Jashinta Shanindita</td>
+                        <td>Login</td>
+                        <td>Istirahat</td>
+                        <td>12:03:12</td>
+                        <td>01:00:30</td>
+                        <td><i class="edit_pencil_icon mr-2"></i> <i class="delete_icon"></i></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" class="form-control" style="font-size: 0px;"></td>
+                        <td>2001</td>
+                        <td>Jashinta Shanindita</td>
+                        <td>Logout</td>
+                        <td>Istirahat</td>
+                        <td>12:03:12</td>
+                        <td>01:00:30</td>
+                        <td><i class="edit_pencil_icon mr-2"></i> <i class="delete_icon"></i></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" class="form-control" style="font-size: 0px;"></td>
+                        <td>2001</td>
+                        <td>Jashinta Shanindita</td>
+                        <td>AUX</td>
+                        <td>Istirahat</td>
+                        <td>12:03:12</td>
+                        <td>01:00:30</td>
+                        <td><i class="edit_pencil_icon mr-2"></i> <i class="delete_icon"></i></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" class="form-control" style="font-size: 0px;"></td>
+                        <td>2001</td>
+                        <td>Jashinta Shanindita</td>
+                        <td>Login</td>
+                        <td>Istirahat</td>
+                        <td>12:03:12</td>
+                        <td>01:00:30</td>
+                        <td><i class="edit_pencil_icon mr-2"></i> <i class="delete_icon"></i></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" class="form-control" style="font-size: 0px;"></td>
+                        <td>2001</td>
+                        <td>Jashinta Shanindita</td>
+                        <td>Logout</td>
+                        <td>Istirahat</td>
+                        <td>12:03:12</td>
+                        <td>01:00:30</td>
+                        <td><i class="edit_pencil_icon mr-2"></i> <i class="delete_icon"></i></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" class="form-control" style="font-size: 0px;"></td>
+                        <td>2001</td>
+                        <td>Jashinta Shanindita</td>
+                        <td>AUX</td>
+                        <td>Istirahat</td>
+                        <td>12:03:12</td>
+                        <td>01:00:30</td>
+                        <td><i class="edit_pencil_icon mr-2"></i> <i class="delete_icon"></i></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Add New modal -->
+    <div class="modal fade" id="addNewAgentLog" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-zoom" role="document">
+            <div class="modal-content" style="width: 70%; left: 15%;">
+                <div class="modal-header mh-custom">
+                    <h6 class="modal-title">Add Agent Log</h6>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <i class="ti-close"></i>
+                    </button>
+                </div>
+                <div class="modal-body" style="padding: 10px 18px !important;">
+                    <form>
+                        
+                            <label for="name" class="col-form-label pb-0 font-title12">Category</label>
+                            <input type="text" class="form-control" style="border-radius: 0px;">
+
+                            <label for="name" class="col-form-label pb-0 font-title12 mt-2">Category Description</label>
+                            <textarea class="form-control" style="border-radius: 0px;" rows="6"></textarea>
+                        <button type="submit" class="btn btn-md btn-blue mt-3 float-right">Save</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ./ Add New modal -->
+
+
+</body>
+<script>
+    (function ($) {
+        $('#menu-content').children("li").on('click', function () {
+            $("li[data-toggle='collapse']").not(this).addClass('collapsed');
+            $("li[data-toggle='collapse']").not(this).next('ul').removeClass('in');
+            //alert('clicked');
+        });
+    });
+
+    $(document).ready(function () {
+        $('#example').DataTable({
+            "searching": false,
+            "lengthChange": false,
+            "info": false,
+            "paging": false,
+            "order": [
+                [1, "asc"]
+            ],
+            /** Here: **/
+            "columnDefs": [{
+                "orderable": false,
+                "targets": [0, 3]
+            }]
+        });
+
+    });
+</script>
+
+<!-- <script>
+    $(document).ready(function () {
+        $('#example').DataTable();
+    });
+</script> -->
+<!-- Popper.js -->
+<script src="./vendor/popper.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="./vendor/bootstrap/bootstrap.min.js"></script>
+
+<script src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.22/js/dataTables.bootstrap4.min.js"></script>
+
+<!-- Nicescroll -->
+<script src="./vendor/jquery.nicescroll.min.js"></script>
+
+<!-- Soho -->
+<script src="./dist/js/soho.min.js"></script>
+
+<!-- Examples -->
+<script src="./dist/js/examples.js"></script>
+
+</html>

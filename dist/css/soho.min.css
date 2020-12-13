@@ -22620,3 +22620,45 @@ body.dark .layout .content .chat .chat-body3 .messages .message-item.outgoing-me
     align-items: center;
     word-break: break-word
 }
+
+.btn-blue {
+    color: #fff;
+    background-color: #3A7094;
+    border-color: #3A7094
+}
+
+.btn-blue:hover {
+    color: #fff;
+    background-color: #4b92c2;
+    border-color: #4b92c2;
+}
+
+.btn-blue.focus,
+.btn-blue:focus {
+    -webkit-box-shadow: 0 0 0 .2rem rgba(45, 102, 163, 0.5);
+    -moz-box-shadow: 0 0 0 .2rem rgba(45, 102, 163, 0.5);
+    box-shadow: 0 0 0 .2rem rgba(45, 102, 163, 0.5);
+}
+
+.btn-blue.disabled,
+.btn-blue:disabled {
+    color: #fff;
+    background-color: #3A7094;
+    border-color: #3A7094;
+}
+
+.btn-blue:not(:disabled):not(.disabled).active,
+.btn-blue:not(:disabled):not(.disabled):active,
+.show>.btn-blue.dropdown-toggle {
+    color: #fff;
+    background-color: #0856aa;
+    border-color: #0856aa;
+}
+
+.btn-blue:not(:disabled):not(.disabled).active:focus,
+.btn-blue:not(:disabled):not(.disabled):active:focus,
+.show>.btn-blue.dropdown-toggle:focus {
+    -webkit-box-shadow: 0 0 0 .2rem rgba(45, 102, 163, 0.5);
+    -moz-box-shadow: 0 0 0 .2rem rgba(45, 102, 163, 0.5);
+    box-shadow: 0 0 0 .2rem rgba(45, 102, 163, 0.5);
+}
